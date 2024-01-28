@@ -1,0 +1,159 @@
+.promo_label_body{min-height:100vh;background: var(--Linear, linear-gradient(90deg, #040607 0.04%, #152627 50.73%, #040607 99.87%));font-family: Inter;margin: 0px;}
+.bg-star-div{display: flex;justify-content: space-between;align-items: center;margin-top: 10px;}
+.blue-star-div{opacity: 0.25;}
+.yellow-star-div{opacity: 0.25;}
+.orange-star-div{opacity: 0.25;margin-top:-60px}
+.bg-star-main-container{height:auto;width:100%;position:absolute;}
+
+
+
+
+.promo-label-main-bg-container{margin-top: 80px;padding: 10px 70px;height: auto;}
+.promo-label-left-bg-container{width: 100%;height: auto;}
+.promo-label-img-div{width: 100%;height: 458px;}
+.promo-label-img{height: 100%;width: 100%;border-radius: 13px;box-shadow: 1px 1px 5px 1px #124f59;transition: all 400ms ease;}
+.promo-label-img:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
+ }
+.promo-label-movie-details-div{width:100%;height: auto;flex-shrink: 0;border-radius: 11px;background: #142731; margin-top:20px;margin-bottom;20px;padding:10px 30px;}
+.promo-label-movie-name{color: var(--ff-5-e-3-a, #FF5E3A);font-family: Inter;font-size: 38px;font-style: normal;font-weight: 600;line-height: normal;letter-spacing: 0.48px;}
+.promo-label-line{width: 95px;height: 11px;flex-shrink: 0;background: var(--ff-5-e-3-a, #FF5E3A);}
+.promo-label-genre-lan-div{display: flex;justify-content: space-between;align-items: center;margin-top:20px;}
+.promo-label-movie-language{color: #FFF;font-family: Inter;font-size: 20px;font-style: normal;font-weight: 400;line-height: 145%;}
+.promo-label-movie-genre{color: #6EAB7D;font-family: Inter;font-size: 20px;font-style: normal;font-weight: 700;line-height: 145%;}
+.promo-label-details-div{display: flex;justify-content: space-between;align-items: center;margin-top: 40px;margin-bottom: 30px;border-bottom: 1px solid #fff;}
+.promo-label-details-heading{color: #6EAB7D;font-family: Inter;font-size: 20px;font-style: normal;font-weight: 700;line-height: 145%;}
+.promo-label-date{border-radius: 40px;background: #6EAB7D;font-size: 15px;color: #fff;padding: 10px;width: 230px;height: 34px;text-align: center;font-weight: 500;}
+.promo-label-details-text{color: #FFF;font-family: Inter;font-size: 16px;font-style: normal;font-weight: 400;line-height: 155%;}
+.promo-label-details-read-more{color: var(--ff-5-e-3-a, #FF5E3A);font-family: Inter;font-size: 16px;font-style: normal;font-weight: 600;line-height: 155%;}
+.promo-label-details-btn{border-width:0px;background-color:transparent;color:#FF5E3A}
+
+.promo-label-right-bg-container{width: 100%;height:auto;border-radius: 11px;background: #142731;padding: 30px 20px;}
+.promo-label-right-heading{color: #6EAB7D;font-family: Inter;font-size: 20px;font-style: normal;font-weight: 700;line-height: 145%;}
+.promo-label-right-line{opacity: 0.25;border: 1px solid #FFF;}
+.promo-label-snippets-bg-container{width: 100%;height: 100vh;margin-bottom: 10px;overflow:auto}
+.promo-label-snippets-div{display: flex;margin-bottom: 20px;}
+.promo-label-snippets-img-div{width: 150px;height: 150px;flex-shrink: 0;margin-right: 15px;}
+.promo-label-snippets-img{height: 100%;width: 100%;border-radius: 10px;box-shadow: 1px 1px 5px 1px #124f59;transition: all 400ms ease;}
+.promo-label-snippets-img:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
+ }
+.promo-label-snippets-img-text{color: rgba(245, 246, 248, 0.52);font-family: Inter;font-size: 16px;font-style: normal;font-weight: 500;line-height: 145%; }
+.promo-label-snippets-bg-container::-webkit-scrollbar {
+  display: none;
+}
+
+.store-bg-container{display: flex;flex-direction:column;justify-content:center;align-items: center;padding:20px;box-shadow:0px 0px 10px 1px #fff;border-radius: 15px;}
+.store-heading{color: var(--Neutral-300, #D1D5DB);font-feature-settings: 'liga' off;font-family: Inter;font-size: 18px;font-style: normal;font-weight: 500;line-height: 28px;}
+.icon-bg-container{display: flex;align-items: center;}
+.playstore-icon{height: 50px;width: 170px; border-radius: 10px;}
+.store-heading-pop{color:#000;font-family: Inter;font-size: 28px;font-weight: 500;margin-bottom:30px; text-align:center;}
+.playstore-icon-pop{height: 50px;width: 170px; border-radius: 10px;}
+.star-div{opacity:0.25;}
+
+@media screen and (max-width:767px){
+    .promo-label-snippets-bg-container{height: 60vh;}
+    .promo-label-main-bg-container{padding: 0px 0px;padding-bottom:267px}
+    .playstore-icon {height: 36px;width: 116px;}
+    .promo-label-img-div{height: 200px;}
+    .promo-label-movie-name{font-size:32px;}
+    .promo-label-line{height:6px;width:85px;margin-top:0px;}
+    .promo-label-movie-language{font-size:16px;}
+    .promo-label-movie-genre{font-size:16px;}
+    .promo-label-details-heading{font-size:18px;}
+    .promo-label-details-text{font-size:14px;}
+    .playstore-icon-pop{height: 50px;width: 150px;}s
+    .blue-star-div{opacity: 1.76;}
+    .yellow-star-div{opacity: 1.76;}
+    .orange-star-div{opacity:1.76;margin-left: 22px;}
+}
+
+/*....promo navbar.....*/
+.promo-navbar{width:100%;height:auto;display:flex;justify-content:space-between;padding:15px 80px;}
+.about-base-logo{height: 45px;width: 45px;margin-bottom: 4px;}
+@media screen and (max-width: 767px){.about-base-logo{height: 35px;width: 35px;margin-bottom: 0px;}}
+.navbar-brand{display: flex;align-items: center;}
+.logo-name{font-family: Roboto,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;color: #6eab7d;font-size: 19px;letter-spacing: .2rem;text-transform: uppercase;font-weight: 700;line-height: 1.3;margin-bottom: 3px;}
+.logo-name-card{margin-left: 10px;}
+.logo-name-description{font-weight: 400;line-height: 1.5;color: #fff;font-size: 11px;letter-spacing: .2rem;margin-top: 0px;margin-bottom: 0px;}
+.logo-sub-description{font-weight: 400;line-height: 1.5;color: #fff;font-size: 11px;letter-spacing: .1rem;margin-top: 0px;margin-bottom:0px;}
+.promo-logo-btn{border-width: 0px;height: 34px;width: 92px;border-radius: 10px;background-color: #6eab7d;font-size: 14px;color: #fff;font-weight: 500;margin-bottom: 0px;}
+.login-text{font-family: inherit;font-size: 18px;color: #6eab7d;margin-right: 25px;margin-top: 4px;font-weight: 500;text-decoration:none;}
+@media screen and (max-width: 767px){
+    #nav-navbar{background-color: transparent;margin-top: -10px;padding-left: 37px;width: 105%;padding-top: 18px;padding-bottom: 18px;}
+    .logo-name{font-size: 11px;}
+    .logo-name-card{margin-left:5px}
+    .logo-name-description{font-size: 8px;}
+    .logo-sub-description{font-size: 8px;}
+    .promo-navbar{padding:15px 10px;}
+    .promo-logo-btn{width:100px;font-size:12px;}
+}
+/*....promo navbar.....*/
+
+
+.promo-bg-container{width: 100%;height: 70vh;display: flex;justify-content: center;align-items: center;}
+.promo-text-bg-container{height: auto;width: 100%;background-color: transparent;padding: 35px 20px;box-shadow: 1px 1px 7px 1px #fff;border-radius: 10px;}
+.promo-movie-name{color: #f96f6ffa;font-size: 28px;font-weight: 500;margin-bottom: 0px;}
+.promo-movie-language{color: #dee2e6;font-size: 12px;font-weight: 400;margin-top: -5px;}
+.promo-movie-description{color: #CFD8DC;font-size: 16px;line-height: 1.4;font-weight: 500;margin-bottom: 20px;}
+.promo-read-more-btn{color: #ed6626;border-width: 0px;background-color: transparent;margin-left: -5px;}
+.promo-movie-genre{color: #fff;font-size: 20px;font-weight: 500;letter-spacing: .1rem;margin-bottom: 20px;text-transform: uppercase;}
+.promo-movie-release-date{color: #e9ecef;font-size: 16px;font-weight: 400;margin-bottom: 15px;}
+.promo-img-bg-container{height: auto;width: 100%;text-align:center;}
+.promo-video-bg-container{height: 85vh;width: 100%;margin-bottom: 10px;text-align:center;}
+.promo-post-img{height: 100%;width: 100%;border-radius: 10px;box-shadow: 1px 1px 5px 1px #124f59;transition: all 400ms ease;}
+.promo-post-img:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
+ }
+
+ @media screen and (max-width:767px){
+     .promo-img-bg-container{margin-bottom: 55px;margin-top:20px;}
+     .promo-video-bg-container{height: 220px;margin-bottom: 0px;}
+     .promo-bg-container{height:auto;}
+ }
+
+..promo-label-snippets-bg-container{width: 100%;height: auto;margin-bottom: 10px;}
+
+ .promo-reviewer-name{font-weight: 700;color: #515365;font-size: 16px;margin-bottom: 0px;}
+ .promo-reviews-bg-container{height: 60vh;width:100%;overflow:auto;padding-top:20px;}
+ .promo-reviews-bg-container::-webkit-scrollbar {display: none;}
+ .promo-review-text{color: #CFD8DC;font-size: 14px;line-height: 1.4;font-weight: 500;}
+
+
+.promo-footer{height: auto;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;display:block;}
+.promo-footer-text-bg{background-color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;padding: 10px 10px;padding-top:52px;width:100%;border-top-right-radius: 15px;border-top-left-radius: 15px;}
+.promo-footer-text{width:100%;text-align:center;}
+.promo-logo{height: 70px;width: 70px;background-color: #a4bfab2e;border-radius: 100%;position: absolute;top: -28px;padding: 8px;left:42%;}
+.promo-footer-heading{font-family: inherit;font-size: 18px;font-weight: 600;color: #f46755;}
+.promo-footer-description{font-size: 14px;font-weight: 500;text-align: center;font-family: inherit;}
+.promo-footer-btn{color: #1e602e;font-size: 22px;font-weight:700}
+.promo-footer-sub-btn{font-size: 16px;font-weight: 600;text-align: center;font-family: inherit;color: #f46755;margin-top: 14px;margin-bottom: 0px;border-width:0px;background:transparent;}
+.promo-footer-sub-text{font-size: 16px;font-weight: 600;text-align: center;font-family: inherit;color: #f46755;margin-top: 14px;margin-bottom: 0px;}
+
+.promo-footer-btn-active{
+     display:none;
+}
+
+@media screen and (min-width:768px){.promo-footer-text{width:40%;}.promo-reviews-bg-container{height:80vh}.promo-footer{display:none}}
+
+/*.....pop up......*/
+.promo-pop-container{height: auto;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:30px 30px;}
+.promo-footer-text{width:100%;text-align:center;}
+.promo-pop-logo{height: 70px;width: 70px;background-color: #a4bfab2e;border-radius: 100%;padding: 8px; margin-bottom:30px;}
+.promo-footer-sub-text-div{margin-top:5px;border-top:1px solid #757575;margin-bottom:20px;}
+
+
+.promo-icons-div{display:flex;margin-right:50px;}
+.likes-count{font-family: inherit;color: #fff;font-size: 16px;margin-left: 3px;margin-top: 2px;}
+@media screen and (max-width:767px){.promo-icons-div{margin-right:20px;}}
+
+
+
+
+.rating-star-div{display:flex;align-items:center;margin-top:15px;}
+.more-reviews-rating-div{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;}
+.more-rating-star-div{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.reviewer-name{font-family: inherit;color: #B0BEC5;font-size: 18px;font-weight: 500;}

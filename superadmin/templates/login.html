@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends "corporateBase.html" %}
+<html lang="en">
+{% load  static %}
+
+<body>
+ {% block header %}
+    <div class="register-page-bg-main-container" id="register-body">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 col-md-7">
+                    <div class="register-text-container">
+                        <p class="register-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                        </p>
+                        <p class="register-text">
+                            If you want more information about Cinystore. Visit here
+                            <a href="https://cinystore.com/corporate/" target="_blank">Corporate page !</a>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="register-bg-container">
+                        <h1 class="register-page-main-heading">POD Login</h1>
+                      
+                        <form>
+                            <div class="register-inputs-container">
+                                <label for="username" class="register-input-texts">User name</label>
+                                <input type="text" id="username" class="register-input-fields" placeholder=" user name"/>
+                            </div>
+                            <div class="register-inputs-container">
+                                <label for="password" class="register-input-texts">Password</label>
+                                <input type="password" id="id_password" name="password" class="register-input-fields" placeholder="password"/>
+									<span toggle="#id_password" class="eye-toggle">👁️‍🗨</span>
+                                
+                            </div>
+							
+                            <!--re-Captcha
+                            <div class="g-recaptcha mb-4" data-sitekey="6LdY0-coAAAAAM3CVTnmZytfGpGNQxnApeE1zWvl"></div>
+                            <!--re-Captcha-->
+                           
+                            <button type="submit" class="register-btn">
+                                <a href="{% url 'superadmin_content' %}" style="color: white; text-decoration:auto;">Submit</a>
+                            </button>
+                            <p class="register-login-description">Create account
+                                <a href="{% url 'registerPage' %}">Register </a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>
+
+</html>

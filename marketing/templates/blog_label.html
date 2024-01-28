@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% extends "market_base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block header %}
+<div class="producer-content-main-bg-container">
+    <div class="producer-content-top-text-div">
+        <a href="{% url 'marketing:marketing_dashboard' %}" class="producer-label-back-icon-div" style="text-decoration:none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+              <path d="M7 1L1 7L7 13" stroke="#1E1E2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Back</p>
+        </a>
+    </div>
+    <h1 class="producer-label-main-heading">Blog Label</h1>
+    <form class="producer-label-form" method="post"  enctype="multipart/form-data" action="{% url 'marketing:blog_label' %}">
+        {% csrf_token %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="producer-label-input-bg-container">
+                        <label for="Blog_name" class="producer-label-input-heading">Blog Name</label>
+                        <input type="text" id="Blog_name" name="Blog_name" class="producer-label-input-fields"/>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="producer-label-input-bg-container">
+                        <label for="description1" class="producer-label-input-heading">Introdcution </label>
+                        <textarea type="text" id="Introdcution" name="Introdcution" rows="6" cols="100" class="producer-label-textarea-fields"></textarea>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="heading1" class="producer-label-input-heading">Heading 1</label>
+                        <input type="text" id="heading1" name="heading1" class="producer-label-input-fields" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="heading2" class="producer-label-input-heading">Heading 2</label>
+                        <input type="text" id="heading2" name="heading2" class="producer-label-input-fields" />
+                    </div>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="description1" class="producer-label-input-heading">Description 1</label>
+                        <textarea type="text" id="description1" name="description1" rows="6" cols="100" class="producer-label-textarea-fields"></textarea>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="description2" class="producer-label-input-heading">Description 2</label>
+                        <textarea type="text" id="description2" name="description2" rows="6" cols="100" class="producer-label-textarea-fields"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="heading3" class="producer-label-input-heading">Heading 3</label>
+                        <input type="text" id="heading3" name="heading3" class="producer-label-input-fields" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="heading4" class="producer-label-input-heading">Heading 4</label>
+                        <input type="text" id="heading4" name="heading3" class="producer-label-input-fields" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="description3" class="producer-label-input-heading">Description 3</label>
+                        <textarea type="text" id="description3" name="description3" rows="6" cols="100" class="producer-label-textarea-fields"></textarea>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="description4" class="producer-label-input-heading">Description 4</label>
+                        <textarea type="text" id="description4" name="description4" rows="6" cols="100" class="producer-label-textarea-fields"></textarea>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="producer-label-input-bg-container">
+                        <label for="description1" class="producer-label-input-heading">Conclusion</label>
+                        <textarea type="text" id="Conclusion" name="Conclusion" rows="6" cols="100" class="producer-label-textarea-fields"></textarea>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="producer-label-input-bg-container">
+                        <p class="producer-label-input-heading">Image 1</p>
+                        <label for="Image1" class='producer-label-upload-text'>
+                            <input id="Image1" name="Image1" type="file" hidden/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                              <path d="M24.5 17.5V22.1667C24.5 22.7855 24.2542 23.379 23.8166 23.8166C23.379 24.2542 22.7855 24.5 22.1667 24.5H5.83333C5.21449 24.5 4.621 24.2542 4.18342 23.8166C3.74583 23.379 3.5 22.7855 3.5 22.1667V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.8337 9.33333L14.0003 3.5L8.16699 9.33333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14 3.5V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Upload image
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="producer-label-input-bg-container">
+                        <p class="producer-label-input-heading">Image 2</p>
+                        <label for="Image2" class='producer-label-upload-text'>
+                            <input id="Image2" name="Image2" type="file" hidden/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                              <path d="M24.5 17.5V22.1667C24.5 22.7855 24.2542 23.379 23.8166 23.8166C23.379 24.2542 22.7855 24.5 22.1667 24.5H5.83333C5.21449 24.5 4.621 24.2542 4.18342 23.8166C3.74583 23.379 3.5 22.7855 3.5 22.1667V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.8337 9.33333L14.0003 3.5L8.16699 9.33333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14 3.5V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Upload image
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="producer-label-btn" type="submit" value="submit">Upload</button>
+    </form>
+</div>
+{% endblock %}
+</body>
+</html>

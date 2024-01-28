@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "kis_team_base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block header %}
+<div class="kis-content-main-bg-container">
+    <div class="kis-content-top-text-div">
+        <div></div>
+        <a href="{% url 'keepitshort:kis_create_team' %}">
+            <button class="kis-content-top-btn">Create Team</button>
+        </a>
+    </div>
+    <div class="kis-content-main-text-bg-container">
+         <div class="kis-content-scroll-container">
+             <div class="kis-each-content-div">
+                <div class="d-flex">
+                    <div class="kis-each-content-img-div">
+                        <img src="{% static 'keepitshortcss/keep_it_short_images/image 11.png' %}" alt="image" class="kis-each-content-img"/>
+                    </div>
+                    <div class="kis-each-content-text-div">
+                        <h1 class="kis-each-content-text-head">Team Name</h1>
+                        <h2 class="kis-each-content-text-sub-head">College Name</h2>
+                        <p class="kis-each-content-description">
+                             Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

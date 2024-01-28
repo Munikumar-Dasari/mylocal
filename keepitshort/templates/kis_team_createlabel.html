@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+{% extends "producer_base.html" %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#movieName').on('input', function () {
+                var Movie_name = $(this).val();
+                $.ajax({
+                    url: '{% url "check_movie_exists" %}',
+                    data: { 'Movie_name': Movie_name },
+                    success: function (response) {
+                        if(!Movie_name){
+							$('#availability-message').text('');
+						}else{
+
+							if (response.available) {
+                            $('#availability-message').text('');
+                        	} else {
+                            $('#availability-message').text('Movie already Exists, Please go add a Post!');
+                        	}
+						}
+                    }
+                });
+            });
+        });
+	</script>
+	<style>
+	.main-header.main-landing p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #38a94b;
+    font-family: "Pensum","Times New Roman",times,serif;
+    font-weight: 400;}
+	</style>
+</head>
+<body>
+{% block header %}
+<div class="producer-content-main-bg-container">
+    <div class="producer-content-top-text-div">
+        <a href="{% url 'keepitshort:kis_team_content' %}" class="producer-label-back-icon-div" style="text-decoration:none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+              <path d="M7 1L1 7L7 13" stroke="#1E1E2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Back</p>
+        </a>
+    </div>
+    <h1 class="producer-label-main-heading">Create Label</h1>
+
+    {% for message in messages %}
+    {% if forloop.first %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+        </div>
+    {% endif %}
+    {% endfor %}
+    
+    <form class="producer-label-form">
+        {% csrf_token %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="movieName" class="producer-label-input-heading">Movie Name*</label>
+                        <input type="text" id="movieName" name="movieName" class="producer-label-input-fields" placeholder="Movie name" />
+                        <p id="availability-message" style="color: red;"></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="genre" class="producer-label-input-heading">Genre*</label>
+                        <select id="genre" class="producer-label-input-fields">
+                            <option>Comedy, Drama</option>
+                            <option>Horror, Comedy</option>
+                            <option>Scifi</option>
+                            <option>Thriller, Comedy</option>
+                            <option>Action, Comedy</option>
+                            <option>Action, Drama, Historic</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                     <div class="producer-label-input-bg-container">
+                        <label for="language" class="producer-label-input-heading">Language*</label>
+                        <select id="language" class="producer-label-input-fields">
+                            <option>Telugu</option>
+                            <option>Hindi</option>
+                            <option>Kannada</option>
+                            <option>Malayalam</option>
+                            <option>Tamil</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                     <div class="producer-label-input-bg-container">
+                        <label for="otherLanguage" class="producer-label-input-heading">Other Languages*</label>
+                        <select id="otherLanguage" class="producer-label-input-fields">
+                            <option>Telugu</option>
+                            <option>Hindi</option>
+                            <option>Kannada</option>
+                            <option>Malayalam</option>
+                            <option>Tamil</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="productionHouse" class="producer-label-input-heading">Production House*</label>
+                        <input type="text" id="productionHouse" name="productionHouse" class="producer-label-input-fields" placeholder="Enter production house" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="producer" class="producer-label-input-heading">Producer*</label>
+                        <input type="text" id="producer" name="producer" class="producer-label-input-fields" placeholder="Enter producer" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="director" class="producer-label-input-heading">Director*</label>
+                        <input type="text" id="director" name="director" class="producer-label-input-fields" placeholder="Enter director" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="musicDirector" class="producer-label-input-heading">Music Director*</label>
+                        <input type="text" id="musicDirector" name="musicDirector" class="producer-label-input-fields" placeholder="Enter music director" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="lyricist" class="producer-label-input-heading">Lyricist</label>
+                        <input type="text" id="lyricist" name="lyricist" class="producer-label-input-fields" placeholder="Enter lyricist" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="singers" class="producer-label-input-heading">Singers</label>
+                        <input type="text" id="singers" name="singers" class="producer-label-input-fields" placeholder="Enter singers" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="cast" class="producer-label-input-heading">Cast*</label>
+                        <input type="text" id="cast" name="cast" class="producer-label-input-fields" placeholder="Enter cast" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="choreographers" class="producer-label-input-heading">Choreographers</label>
+                        <input type="text" id="choreographers" name="choreographers" class="producer-label-input-fields" placeholder="Enter choreographers" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="scriptWriter" class="producer-label-input-heading">Script Writer</label>
+                        <input type="text" id="scriptWriter" name="scriptWriter" class="producer-label-input-fields" placeholder="Enter script writer" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="editor" class="producer-label-input-heading">Editor</label>
+                        <input type="text" id="editor" name="editor" class="producer-label-input-fields" placeholder="Enter editor" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="cinematographer" class="producer-label-input-heading">Cinematographer</label>
+                        <input type="text" id="cinematographer" name="cinematographer" class="producer-label-input-fields" placeholder="Enter cinematographer" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="runtime" class="producer-label-input-heading">Runtime</label>
+                        <input type="text" id="runtime" name="runtime" class="producer-label-input-fields" placeholder="Enter runtime" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="filmCertification" class="producer-label-input-heading">Film Certification</label>
+                        <select id="filmCertification" class="producer-label-input-fields">
+                            <option value="U">U</option>
+                        <option value="U/A">U/A</option>
+                        <option value="A">A</option>
+                        <option value="Not Certified Yet">Not Certified Yet</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="distributor" class="producer-label-input-heading">Distributor</label>
+                        <input type="text" id="distributor" name="distributor" class="producer-label-input-fields" placeholder="Enter distributor" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="recordingStudio" class="producer-label-input-heading">Recording Studio</label>
+                        <input type="text" id="recordingStudio" name="recordingStudio" class="producer-label-input-fields" placeholder="Enter recording studio" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="budget" class="producer-label-input-heading">Budget</label>
+                        <input type="text" id="budget" name="budget" class="producer-label-input-fields" placeholder="Enter budget" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="releaseDate" class="producer-label-input-heading">Release Date*</label>
+                        <input type="date" id="releaseDate" name="releaseDate" class="producer-label-input-fields" placeholder="Enter release date" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="trailerLink" class="producer-label-input-heading">Trailer Link*</label>
+                        <input type="text" id="trailerLink" name="trailerLink" class="producer-label-input-fields" placeholder="Enter trailer link" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="uploadPoster" class="producer-label-input-heading">Upload Posters*</label>
+                        <label class='producer-label-upload-text'>
+                            <input id="uploadPoster" name="uploadPoster" type="file" hidden/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                              <path d="M24.5 17.5V22.1667C24.5 22.7855 24.2542 23.379 23.8166 23.8166C23.379 24.2542 22.7855 24.5 22.1667 24.5H5.83333C5.21449 24.5 4.621 24.2542 4.18342 23.8166C3.74583 23.379 3.5 22.7855 3.5 22.1667V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.8337 9.33333L14.0003 3.5L8.16699 9.33333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14 3.5V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Upload file
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="uploadBanner" class="producer-label-input-heading">Upload Banner*</label>
+                        <label class='producer-label-upload-text'>
+                            <input id="uploadBanner" name="uploadBanner" type="file" hidden/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                              <path d="M24.5 17.5V22.1667C24.5 22.7855 24.2542 23.379 23.8166 23.8166C23.379 24.2542 22.7855 24.5 22.1667 24.5H5.83333C5.21449 24.5 4.621 24.2542 4.18342 23.8166C3.74583 23.379 3.5 22.7855 3.5 22.1667V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.8337 9.33333L14.0003 3.5L8.16699 9.33333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14 3.5V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Upload file
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="cgTeam" class="producer-label-input-heading">CG Team</label>
+                        <input type="text" id="cgTeam" name="cgTeam" class="producer-label-input-fields" placeholder="Enter CG team" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="urlName" class="producer-label-input-heading">URL name</label>
+                        <input type="text" id="urlName" name="budget" class="producer-label-input-fields" placeholder="Enter url name" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="producer-label-input-bg-container">
+                        <label for="synopsis" class="producer-label-input-heading">Synopsis/Plotline*</label>
+                        <textarea type="text" id="synopsis" name="synopsis" rows="6" cols="100" class="producer-label-textarea-fields" placeholder="Enter synopsis"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="producer-label-btn">Upload</button>
+    </form>
+</div>
+{% endblock %}
+</body>
+</html>

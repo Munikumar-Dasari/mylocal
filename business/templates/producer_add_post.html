@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% extends "producer_base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block header %}
+
+<div class="producer-content-main-bg-container">
+    <div class="producer-content-top-text-div">
+        {% for x in producer_base %}
+                {% if forloop.counter <= 1 %}
+        <a href="{% url 'business:producer_content' x.production_house %}" class="producer-label-back-icon-div" style="text-decoration:none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+              <path d="M7 1L1 7L7 13" stroke="#1E1E2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Back</p>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <h1 class="producer-label-main-heading">Add Post</h1>
+    <form class="producer-label-form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container-fluid">
+            {% for x in mydata %}
+    {% if forloop.counter <= 1 %}
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="Movie_name" class="producer-label-input-heading">Movie Name*</label>
+                        <input type="text" id="Movie_name" name="Movie_name" value="{{ x.Movie_name }}" class="producer-label-input-fields" placeholder="Enter movie name" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="Genre" class="producer-label-input-heading">Genre*</label>
+                        <select id="Genre" name="Genre" class="producer-label-input-fields">
+                            <option value="{{ x.Genre }}">{{ x.Genre }}</option>
+                            <option value="Comedy, Drama">Comedy, Drama</option>
+                            <option value="Horror, Comedy">Horror, Comedy</option>
+                            <option value="Scifi">Scifi</option>
+                            <option value="Thriller, Comedy">Thriller, Comedy</option>
+                            <option value="Action, Comedy">Action, Comedy</option>
+                            <option value="Action, Drama, Historic">Action, Drama, Historic</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="row">
+               
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="Language" class="producer-label-input-heading">Language*</label>
+                        <select id="Language" name="Language" class="producer-label-input-fields">
+                            <option value="{{ x.Language }}">{{ x.Language }}</option>
+                            <option value="Telugu">Telugu</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Kannada">Kannada</option>
+                            <option value="Malayalam">Malayalam</option>
+                            <option value="Tamil">Tamil</option>
+                            <option value="English">English</option>
+                        </select>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <label for="Heading" class="producer-label-input-heading">Heading</label>
+                        <input type="text" id="Heading" name="Heading" class="producer-label-input-fields" placeholder="Enter heading"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="producer-label-input-bg-container">
+                        <label for="text" class="producer-label-input-heading">Enter Description text</label>
+                        <textarea type="text" id="text" name="text" rows="8" cols="100" class="producer-label-textarea-fields" placeholder="Enter text here"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="producer-label-input-bg-container">
+                        <p class="producer-label-input-heading">Upload banner/thumbnail</p>
+                        <label for="Image" class='producer-label-upload-text'>
+                            <input id="Image" name="Image" type="file" hidden/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                              <path d="M24.5 17.5V22.1667C24.5 22.7855 24.2542 23.379 23.8166 23.8166C23.379 24.2542 22.7855 24.5 22.1667 24.5H5.83333C5.21449 24.5 4.621 24.2542 4.18342 23.8166C3.74583 23.379 3.5 22.7855 3.5 22.1667V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.8337 9.33333L14.0003 3.5L8.16699 9.33333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14 3.5V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Upload file
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" value="submit" class="producer-label-btn">Upload</button>
+    </form>
+</div>
+{% endblock %}
+</body>
+</html>

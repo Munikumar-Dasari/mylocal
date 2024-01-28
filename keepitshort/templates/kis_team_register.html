@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{% extends "businessBase.html" %}
+<html lang="en">
+{% load  static %}
+    {% block jquery %}
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('#register-name').on('input', function () {
+					var username = $(this).val();
+                    console.log(username);
+					$.ajax({
+						url: '{% url "cinystoreapp:check_username_availability" %}',
+						data: { 'username': username },
+						success: function (response) {
+							if(!username){
+								$('#availability-message').text('');
+							}else{
+								
+								if (response.available) {
+								$('#availability-message').text('Username is available!');
+								} else {
+								$('#availability-message').text('Username already in use!');
+								}
+							}
+							
+							
+						}
+					});
+				});
+			});
+			$(document).ready(function () {
+				$('#register-mail').on('input', function () {
+					var email = $(this).val();
+					$.ajax({
+						url: '{% url "cinystoreapp:check_email_availability" %}',
+						data: { 'email': email },
+						success: function (response) {
+							if (!email){
+								$('#email-availability-message').text('');
+							}else{
+						
+								if (response.available) {
+								$('#email-availability-message').text('Email is available!');
+								} else {
+								$('#email-availability-message').text('Email already registered');
+								} 
+							}
+							
+						}
+					});
+				});
+			});
+    	</script>
+		<script>
+		 function validateUsername() {
+        var usernameInput = document.getElementById("register-name");
+        var usernameError = document.getElementById("usernameError");
+
+        // Check if the username contains invalid characters
+        if (/[@\/.+\-_]/.test(usernameInput.value)) {
+            usernameError.textContent = "Username should not contain @, /, ., +, -, or _ characters.";
+            return false;  // Prevent form submission
+        } else {
+            usernameError.textContent = "";  // Clear error message if valid
+            return true;  // Proceed with form submission
+        }
+    }
+        function validateCheckbox() {
+            var checkbox = document.querySelector('input[name="optionsCheckboxes"]');
+
+            if (!checkbox.checked) {
+                // Display error message if the checkbox is not checked
+                var errorParagraph = document.getElementById("checkboxError");
+                errorParagraph.textContent = "Please accept the Terms and Conditions and Privacy Policy before submitting the form.";
+                return false; // Prevent form submission
+            }
+
+            // Proceed with form submission if the checkbox is checked
+            return true;
+        }
+    </script>
+		<style>
+			.main-header.main-landing p {
+				margin-bottom: 10px;
+				font-size: 16px;
+				color: #38a94b;
+				font-family: "Pensum","Times New Roman",times,serif;
+				font-weight: 400;
+			}
+			.error-message {
+            color: red;
+            font-size: 14px;
+        }
+		</style>
+	{% endblock %}
+
+<body>
+ {% block header %}
+    <div class="register-page-bg-main-container" id="register-body">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 col-md-7">
+                    <div class="register-text-container">
+                        <p class="register-text">
+                           Welcome to Cinystore:where creators thrive! 
+                           As a producer on our platform, you unlock unparalleled benefits tailored to elevate your creative journey. 
+                           <p class="register-side-subheading"></p> Enjoy seamless visibility for your projects, reaching a diverse audience eager to discover your talent. </p>
+                           <p class="register-side-subeading"></p> Showcase your portfolio with immersive profiles, highlighting past successes and future endeavors.</p>
+                            Our community fosters collaboration, connecting you with fellow industry professionals, potential 
+                            collaborators, and enthusiastic fans. Gain access to exclusive resources, from industry insights 
+                            to promotional opportunities, ensuring your work receives the recognition it deserves.
+                             We prioritize simplicity, providing intuitive tools for you to effortlessly manage and customize your profile. Benefit from our user-friendly interface, designed with creators in mind. We are committed to your success, providing the support you need to thrive.
+                        </p>
+                        
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="register-bg-container">
+                        <h1 class="register-page-main-heading">Creators Registration</h1>
+                        <p class="register-page-main-description">Create your Cinystore account</p>
+                        {% if messages %}
+                            {% for message in messages %}
+                                <p class="-alert alert-{{ messages.last.tags }} alert-dismissible fade show" role="alert"">{{ message }}</p>
+                            {% endfor %}
+                        {% endif %}
+                        <form method="POST" action="">
+                            {% csrf_token %}
+                            <div class="register-inputs-container">
+                                <label for="register-name" class="register-input-texts">Username</label>
+                                <input type="text" id="register-name" name="register-name" class="register-input-fields" placeholder=" user name"/>
+                                <p id='availability-message'></p>
+                            </div>
+                            <div class="register-inputs-container">
+                                <label for="register-mail" class="register-input-texts">E-mail</label>
+                                <input type="email" id="register-mail" name="register-mail" class="register-input-fields" placeholder=" e-mail address"/>
+                                <p id='email-availability-message'></p>
+                            </div>
+							<div class="register-inputs-container">
+                                <label for="register-password" class="register-input-texts">Password</label>
+                                <input type="password" id="register-password" name="register-password" class="register-input-fields" placeholder="password"/>
+                            </div>
+							<div class="register-inputs-container">
+                                <label for="register-confirm-pssword" class="register-input-texts">Confirm Password</label>
+                                <input type="password" id="register-confirm-password" name="register-confirm-password" class="register-input-fields" placeholder="confirm password"/>
+                            </div>
+                            <!--re-Captcha-->
+                            <!-- <div class="g-recaptcha mb-4" data-sitekey="6LdY0-coAAAAAM3CVTnmZytfGpGNQxnApeE1zWvl"></div> -->
+                            <!--re-Captcha-->
+                            <!-- <p class="register-alert-text">By click submit, you visit our
+                                <a href="{% url 'corporate:Privacy' %}">privacy and terms</a>
+                            </p> -->
+                            <button type="submit" class="register-btn" style="color: white; text-decoration:auto;">
+                                Submit
+                            </button>
+                            <p class="register-login-description">Already have an account
+                                <a href= "{% url 'keepitshort:kis_team_login' %}" >Login </a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>
+
+</html>

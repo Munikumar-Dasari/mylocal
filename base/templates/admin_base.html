@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>Cinystore | admin </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'podadmincss/css/admin.css' %}"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+    <lik rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div class="producer-bg-main-container">
+    <div class="producer-left-bg-container">
+        <div class="d-flex mt-3">
+             <img src="https://www.cinystore.com/static/business/img/logo.webp" alt="logo" class="corporate-logo mr-1" />
+            <div class="corporate-logo-name-container">
+                <h1 class="corporate-logo-name">CinyStore</h1>
+                <p class="corporate-logo-name-description" style="color:#ffff">Poora Filmy Hai Boss</p>
+                <p class="corporate-logo-name-description" style="color:#ffff">Beta Version</p>
+            </div>
+        </div>
+        
+        <div class="producer-left-options-container">
+            
+            <div class="producer-left-options-div">
+              
+                <a href="#" style="text-decoration:none;">
+                    <div class="producer-left-each-option-div" id="dashboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" style="height:26px;width:26px;margin-left: -6px;margin-right: -3px;">
+                          <path opacity="0.7" d="M9.42105 18H7C5.89543 18 5 17.1046 5 16V9.91987C5 9.33602 5.25513 8.78132 5.69842 8.40136L10.6984 4.11564C11.4474 3.47366 12.5526 3.47366 13.3016 4.11564L18.3016 8.40136C18.7449 8.78132 19 9.33602 19 9.91987V16C19 17.1046 18.1046 18 17 18H14.5789M9.42105 18V12.5C9.42105 11.6716 10.0926 11 10.9211 11H13.0789C13.9074 11 14.5789 11.6716 14.5789 12.5V18M9.42105 18H14.5789" stroke="white" stroke-width="1.3"/>
+                        </svg>
+                        <p class="producer-left-each-option-text" id="dashboardText">Dashboard</p>
+                    </div>
+                </a>
+               
+                
+                <a href="#" style="text-decoration:none;">
+                    <div class="producer-left-each-option-div" id="content">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M0 14.1667H7.08333V15.5833H0V14.1667ZM0 9.91667H7.08333V11.3333H0V9.91667ZM15.5833 7.08333H1.41667C1.04094 7.08333 0.680609 6.93408 0.414932 6.6684C0.149255 6.40272 0 6.04239 0 5.66667V1.41667C0 1.04094 0.149255 0.680609 0.414932 0.414932C0.680609 0.149255 1.04094 0 1.41667 0H15.5833C15.9591 0 16.3194 0.149255 16.5851 0.414932C16.8507 0.680609 17 1.04094 17 1.41667V5.66667C17 6.04239 16.8507 6.40272 16.5851 6.6684C16.3194 6.93408 15.9591 7.08333 15.5833 7.08333ZM1.41667 1.41667V5.66667H15.5833V1.41667H1.41667ZM15.5833 17H11.3333C10.9576 17 10.5973 16.8507 10.3316 16.5851C10.0659 16.3194 9.91667 15.9591 9.91667 15.5833V11.3333C9.91667 10.9576 10.0659 10.5973 10.3316 10.3316C10.5973 10.0659 10.9576 9.91667 11.3333 9.91667H15.5833C15.9591 9.91667 16.3194 10.0659 16.5851 10.3316C16.8507 10.5973 17 10.9576 17 11.3333V15.5833C17 15.9591 16.8507 16.3194 16.5851 16.5851C16.3194 16.8507 15.9591 17 15.5833 17ZM11.3333 11.3333V15.5833H15.5833V11.3333H11.3333Z" fill="white"/>
+                        </svg>
+                        <p class="producer-left-each-option-text" id="contentText">Content</p>
+                    </div>
+                </a>
+                <a href="#" style="text-decoration:none;">
+                    <div class="producer-left-each-option-div" id="account">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <g opacity="0.7">
+                            <path d="M1 17V16.1111C1 13.1656 3.38781 10.7778 6.33333 10.7778H9.88889C12.8344 10.7778 15.2222 13.1656 15.2222 16.1111V17" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M8.11122 8.11111C6.14754 8.11111 4.55566 6.51924 4.55566 4.55556C4.55566 2.59188 6.14754 1 8.11122 1C10.0749 1 11.6668 2.59188 11.6668 4.55556C11.6668 6.51924 10.0749 8.11111 8.11122 8.11111Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                          </g>
+                        </svg>
+
+                        <p class="admin-left-each-option-text" id="accountText">Account</p>
+                    </div>
+                </a>
+              
+            </div>
+            <div class="producer-left-options-div">
+                <div class="producer-left-each-option-div">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#DFDFDF" class="bi bi-highlights" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-8 5v1H4.5a.502.502 0 0 0-.093.009A7.029 7.029 0 0 1 3.1 13zm0-1H2.255a6.998 6.998 0 0 1-.581-1H8zm-6.71-2a6.96 6.96 0 0 1-.22-1H8v1zM1 8c0-.34.024-.673.07-1H8v1zm.29-2c.103-.345.231-.68.384-1H8v1zm.965-2c.25-.36.534-.694.846-1H8v1zm2.137-2A6.967 6.967 0 0 1 8 1v1z"/>
+                    </svg>
+                    <p class="producer-left-each-option-text">Light Mode</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" style="margin-left:40px;" fill="#FF5E3A" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                      <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8"/>
+                    </svg>
+                </div>
+                <div class="producer-left-each-option-div">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#DFDFDF" class="bi bi-gear" viewBox="0 0 16 16">
+                      <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                      <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                    </svg>
+                    <p class="admin-left-each-option-text">Settings</p>
+                </div>
+
+                <div class="producer-left-each-option-div">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FF5E3A" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                      <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                    </svg>
+                    
+                    <p class="producer-left-each-option-text" style="color:#FF5E3A;">
+                        <a href="{% url 'podadmin:PODlogout' %}" class="producer-left-each-option-text" style="text-decoration: none;">   Log Out </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="producer-right-bg-container">
+        <div class="producer-profile-bg-container">
+            <div class="producer-profile-container">
+                <div class="producer-profile-img-div">
+                     <img src="{% static 'adminImages/Rectangle 5.png' %}" class="admin-profile-img" />
+                </div>
+                <p class="producer-profile-greeting-text">Welcome,
+                     <span class="producer-profile-name">Munikumar</span>
+                </p>
+            </div>
+        </div>
+        {% block header %}
+
+
+        {% endblock %}
+    </div>
+</div>
+
+
+
+<!--scripts-->
+    <script src="{% static 'business/js/admin.js' %}"></script>
+    <script src="{% static 'business/js/adminCharts.js' %}"></script>
+    <script src="{% static 'business/js/adminAccount.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

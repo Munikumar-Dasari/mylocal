@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "businessBase.html" %}
+<html>
+{% load static %}
+
+<body>
+ {% block header %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-7">
+            <div class="otp-page-text-container">
+
+            </div>
+        </div>
+        <div class="col-12 col-md-5">
+            <div class="otp-page-bg-container">
+                <div class="otp-page-container">
+                    <label for="phone-number" class="otp-page-label-text">OTP</label>
+                    <input type="text" id="phone-number" class="otp-page-input-field" placeholder="OTP " />
+                    <div class="otp-page-btn-container">
+                        <a href="{% url 'selectPage' %}">
+                            <button class="otp-page-btn mr-4">
+                               Resend
+                            </button>
+                        </a>
+                        <a href="{% url 'selectPage' %}">
+                            <button class="otp-page-btn">
+                               Submit
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+
+</html>

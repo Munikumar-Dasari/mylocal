@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  {% for x in mydata2 %}
+  {% if forloop.counter <= 1 %}
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta property="og:title" content="{{ x.Movie_name }}"/>
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="{{ x.Image.url }}"/>
+        <meta property="og:description" content="{{ x.text }}"/>
+        <meta property="og:site_name" content="cinystore">
+        <meta property="og:url" content="https://www.cinystore.com/promo_post/{{ x.slug }}/">
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta property="og:description" content="{{ x.text }}" name="description">
+        <meta property="og:title" content="{{ x.Movie_name }}" name="keywords">
+        <title>{{ x.Movie_name|capfirst }} </title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/promo.css' %}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wdth,wght@78,600;100,400;100,700&amp;display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+   	{% endif %}
+	{% endfor %}
+</head>
+<body class="promo_label_body">
+     <nav class="promo-navbar fixed-top" id="promoNavbar">
+          <a class="navbar-brand d-flex" href="#">
+            <img src="https://www.cinystore.com/static/img/logo.webp" alt="logo" class="about-base-logo" />
+                <div class="logo-name-card">
+                    <h1 class="logo-name">CinyStore</h1>
+                    <p class="logo-name-description" id="logoName">Poora Filmy Hai Boss</p>
+                    <p class="logo-sub-description" id="logoSub">Beta Version</p>
+                </div>
+          </a>
+         <div class="d-flex mt-1 mt-md-2">
+             <a href="{% url 'cinystoreapp:auth_login' %}" class="login-text d-none d-md-block">Login</a>
+             <a href="https://play.google.com/store/apps/details?id=com.cinystore&pcampaignid=web_share"><button class="promo-logo-btn">Open App</button></a>
+         </div>
+     </nav>
+     <div class="bg-star-main-container">
+        <div class="bg-star-div">
+            <div class="blue-star-div">
+                <svg xmlns="http://www.w3.org/2000/svg" class="d-none d-md-block" width="502" height="475" viewBox="0 0 502 475" fill="none">
+                    <path d="M393.224 441.783L492.348 271.079C504.191 250.685 504.625 225.678 492.274 205.361L394.846 33.5221C383.248 13.6425 361.434 0.957824 338.432 0.716838L141.441 0.33808C117.248 0.415019 95.7523 13.1746 83.9101 33.5685L-15.6527 205.028C-27.4949 225.422 -27.9293 250.429 -15.5787 270.746L82.2881 441.83C93.8866 461.709 115.7 474.394 138.702 474.635L336.884 474.696C359.886 474.937 381.382 462.177 393.224 441.783Z" fill="#42E4CE"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="d-block d-md-none" width="129" height="422" viewBox="0 0 129 422" fill="none">
+                  <path d="M129 290.016V131.984C129 113.104 119.228 95.623 102.477 86.5327L-34.326 6.81773C-50.3794 -2.27258 -70.6206 -2.27258 -86.674 6.81773L-223.477 85.8335C-240.228 95.623 -250 113.104 -250 131.984L-250 290.715C-250 309.595 -240.228 327.076 -223.477 336.167L-86.674 415.182C-70.6206 424.273 -50.3794 424.273 -34.326 415.182L103.175 335.467C119.228 326.377 129 308.896 129 290.016Z" fill="#133B36"/>
+                </svg>
+            </div>
+            <div class="yellow-star-div">
+                <svg xmlns="http://www.w3.org/2000/svg" class="d-none d-md-block" width="148" height="275" viewBox="0 0 148 275" fill="none">
+                  <path opacity="0.52" d="M246.407 188.988V86.4043C246.407 74.1487 240.079 62.8009 229.23 56.9L140.634 5.15404C130.237 -0.746821 117.128 -0.746821 106.732 5.15404L18.1349 56.4461C7.28635 62.8009 0.958008 74.1487 0.958008 86.4043L0.958008 189.442C0.958008 201.698 7.28635 213.046 18.1349 218.947L106.732 270.239C117.128 276.14 130.237 276.14 140.634 270.239L229.682 218.493C240.079 212.592 246.407 201.244 246.407 188.988Z" fill="#FFC102"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="d-block d-md-none" width="78" height="142" viewBox="0 0 78 142" fill="none">
+                  <path d="M126.646 97.2352V44.599C126.646 38.3106 123.399 32.488 117.832 29.4603L72.373 2.90924C67.0385 -0.118509 60.3124 -0.118509 54.9779 2.90924L9.51861 29.2273C3.95217 32.488 0.705078 38.3106 0.705078 44.599L0.705078 97.4681C0.705078 103.757 3.95217 109.579 9.51861 112.607L54.9779 138.925C60.3124 141.953 67.0385 141.953 72.373 138.925L118.064 112.374C123.399 109.346 126.646 103.524 126.646 97.2352Z" fill="#231F09"/>
+                </svg>
+            </div>
+        </div>
+
+    </div>
+     <div class="promo-label-main-bg-container" id="promoLabelMainContainer">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-8 order-1 order-md-0">
+                <div class="promo-bg-container">
+                    <div class="promo-text-bg-container">
+                         <div class="mb-4">
+                          {% for x in mydata %}
+                          {% if forloop.counter <= 1 %}
+                          <h1 class="promo-movie-name">{{ x.Movie_name }}</h1><br>
+                          <p class="promo-movie-language">{{ x.Language }}</p>
+                          {% endif %}
+                          {% endfor %}
+                        </div>
+                        {% for x in promo_post %}
+                        {% if forloop.counter <= 1 %}
+                         <p class="promo-movie-description">
+                            {{ x.text|slice:":200" }}
+                           <button type="button" class="promo-read-more-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                               Read more
+                           </button>
+
+                       </p>
+                       {% endif %}
+                       {% endfor %}
+                       {% for x in mydata %}
+                       {% if forloop.counter <= 1 %}
+                         <h2 class="promo-movie-genre">{{ x.Genre }}</h2>
+                           <p class="promo-movie-release-date">Release date
+                               <span style="color: #f96f6ffa;">{{ x.Release_date }}</span>
+                           </p>
+                           {% endif %}
+                       {% endfor %}
+                       {% for x in promo_post %}
+                        {% if forloop.counter <= 1 %}
+                         <div class="d-flex mt-5">
+                            <div class="promo-icons-div">
+                                <button type="button" class="promo-read-more-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"  fill="#f46755" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+                                        <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+                                      </svg>
+                                      <span class="likes-count">{{ x.like_count }}</span>
+                                </button>
+                            </div>
+                            <div class="promo-icons-div">
+                              <button type="button" class="promo-read-more-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#f46755" class="bi bi-chat-fill" viewBox="0 0 16 16">
+                                      <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15"/>
+                                    </svg>
+                                <span class="likes-count">{{ x.comment_count }}</span>
+                               </button>
+                            </div>
+                            <div class="promo-icons-div">
+                              <button type="button" class="promo-read-more-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#f46755" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                                  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                  <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4"/>
+                                </svg>
+                                <span class="likes-count">{{ x.follow_count }}</span>
+                            </button>
+
+                            </div>
+                            <div class="promo-icons-div">
+                              <button type="button" class="promo-read-more-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#f46755" class="bi bi-share-fill" viewBox="0 0 16 16">
+                                  <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+                                </svg>
+                                <span class="likes-count">{{ x.share_count }}</span>
+                            </button>
+                            </div>
+                        </div>
+                        {% endif %}
+                       {% endfor %}
+                   </div>
+                </div>
+            </div>
+            {% for x in promo_post %}
+            {% if forloop.counter <= 1 %}
+            <div class="col-12 col-md-4 order-0">
+                <div class="promo-bg-container">
+                    <div class="promo-img-bg-container">
+                        <img src="{{ x.Image.url }}" alt="image" class="promo-post-img" />
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+     <footer class="promo-footer fixed-bottom" id="promoFooter">
+         <img src="https://www.cinystore.com/static/img/logo.webp" alt="logo" class="promo-logo" />
+         <div class="promo-footer-text-bg">
+             <div class="promo-footer-text">
+                 <h1 class="promo-footer-heading">See full details in the app</h1>
+                 <p class="promo-footer-description">Know more about the Movie, Enjoy Movie Clips, and Read reviews...</p>
+                 <h1 class="promo-footer-btn mb-2">Get the Cinystore app</h1>
+                 <div class="corporate-footer-icons-container">
+                        <a href="https://play.google.com/store/apps/details?id=com.cinystore&pcampaignid=web_share" style="text-decoration:none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#1e602e" class="bi bi-google-play" viewBox="0 0 16 16">
+                              <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295M1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
+                            </svg>
+                        </a>
+                        <a href="#" style="text-decoration:none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#1e602e" class="bi bi-apple" viewBox="0 0 16 16">
+                              <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                              <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                 <button class="promo-footer-sub-btn" id="promoFooterSubBtn">Not Now</button>
+             </div>
+         </div>
+    </footer>
+
+    </div>
+
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                   <div class="promo-pop-container">
+                         <img src="https://www.cinystore.com/static/img/logo.webp" alt="logo" class="promo-pop-logo" />
+                         <h1 class="promo-footer-heading">See full details in the app</h1>
+                         <p class="promo-footer-description">Know more about the Movie, Enjoy Movie Clips, and Read reviews...</p>
+                         <h1 class="promo-footer-btn mb-2">Get the Cinystore app</h1>
+                         <div class="corporate-footer-icons-container">
+                            <a href="https://play.google.com/store/apps/details?id=com.cinystore&pcampaignid=web_share" style="text-decoration:none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#1e602e" class="bi bi-google-play" viewBox="0 0 16 16">
+                                  <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295M1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
+                                </svg>
+                            </a>
+                            <a href="#" style="text-decoration:none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#1e602e" class="bi bi-apple" viewBox="0 0 16 16">
+                                  <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                                  <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+              </div>
+              <div class="promo-footer-sub-text-div">
+                  <p class="promo-footer-sub-text">
+                      <a href="{% url 'cinystoreapp:auth_login' %}" style="text-decoration:none">Login</a>
+                      <span style="color:#000">or</span>
+                      <a href="{% url 'cinystoreapp:Authregister' %}" style="text-decoration:none">Sign up</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+<!--scripts-->
+    <script src="{% static 'assets/js/promo.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

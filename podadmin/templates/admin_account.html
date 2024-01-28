@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+{% extends "admin_base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block header %}
+<div class="admin-content-main-bg-container">
+    <div class="admin-content-top-text-div">
+        <h1 class="admin-label-main-heading">Account</h1>
+    </div>
+    {% for message in messages %}
+        {% if forloop.first %}
+            <div class="alert alert-{{ messages.tags }} alert-dismissible fade show" role="alert">
+                <strong>{{ message }}</strong>
+            </div>
+        {% endif %}
+    {% endfor %}
+    {% for x in admin_account %}
+    <div style="padding:20px 50px;">
+        <div class="admin-account-profile-bg-container">
+            <div class="admin-account-profile-container">
+                <div class="admin-account-profile-img-div">
+                    <img src="{% static 'business/adminImages/Ellipse 1.svg' %}" alt="image" class="admin-account-profile-img"/>
+                </div>
+                <div class="admin-account-profile-text-div">
+                    <div class="admin-account-profile-mail-div">
+                        <h1 class="admin-account-profile-name">{{x.pod_name}}</h1>
+                    </div>
+                    <div class="admin-account-profile-mail-div">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16" fill="none">
+                          <path d="M0 4.8608V12.8C0 13.6487 0.33363 14.4626 0.927495 15.0627C1.52136 15.6629 2.32681 16 3.16667 16H15.8333C16.6732 16 17.4786 15.6629 18.0725 15.0627C18.6664 14.4626 19 13.6487 19 12.8V3.2C19 2.35131 18.6664 1.53737 18.0725 0.937258C17.4786 0.337142 16.6732 0 15.8333 0H3.16667C2.32681 0 1.52136 0.337142 0.927495 0.937258C0.33363 1.53737 0 2.35131 0 3.2V4.8608ZM3.16667 1.6H15.8333C16.2533 1.6 16.656 1.76857 16.9529 2.06863C17.2499 2.36869 17.4167 2.77565 17.4167 3.2V4.384L9.5 8.6912L1.58333 4.384V3.2C1.58333 2.77565 1.75015 2.36869 2.04708 2.06863C2.34401 1.76857 2.74674 1.6 3.16667 1.6ZM1.58333 6.2016L9.12475 10.304C9.24008 10.3667 9.36902 10.3996 9.5 10.3996C9.63098 10.3996 9.75992 10.3667 9.87525 10.304L17.4167 6.2016V12.8C17.4167 13.2243 17.2499 13.6313 16.9529 13.9314C16.656 14.2314 16.2533 14.4 15.8333 14.4H3.16667C2.74674 14.4 2.34401 14.2314 2.04708 13.9314C1.75015 13.6313 1.58333 13.2243 1.58333 12.8V6.2016Z" fill="#FF5E3A"/>
+                        </svg>
+                        <p class="admin-account-profile-mail">{{x.pod_email}}</p>
+                    </div>
+                    <div class="admin-account-profile-mail-div">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
+                          <path d="M2.38429 0.396002L3.3758 0.0990659C3.91895 -0.0640171 4.50315 -0.0247587 5.01937 0.209516C5.53559 0.44379 5.94857 0.857075 6.18125 1.37225L6.94761 3.06927C7.14766 3.51239 7.20337 4.00675 7.10692 4.483C7.01047 4.95925 6.76669 5.39348 6.4098 5.72477L5.14046 6.90321C5.10336 6.93764 5.07985 6.98415 5.07419 7.03433C5.03681 7.37018 5.26536 8.02412 5.79212 8.93354C6.1753 9.59424 6.5228 10.0587 6.81762 10.3184C7.02322 10.5003 7.13622 10.5392 7.18465 10.5257L8.89239 10.0054C9.35876 9.86335 9.85808 9.87018 10.3203 10.0249C10.7826 10.1797 11.1847 10.4746 11.4701 10.8683L12.5585 12.3707C12.8895 12.8276 13.0427 13.3886 12.9897 13.9494C12.9368 14.5103 12.6812 15.033 12.2705 15.4204L11.5177 16.1311C11.1182 16.5078 10.6275 16.775 10.0934 16.9068C9.55935 17.0386 9.0001 17.0305 8.47013 16.8831C6.13027 16.2326 4.03255 14.2665 2.15319 11.0256C0.271279 7.78048 -0.388878 4.98539 0.219452 2.63952C0.35639 2.11191 0.627513 1.62833 1.00669 1.23537C1.38586 0.842416 1.86031 0.553338 2.38429 0.396002ZM2.75217 1.61166C2.43788 1.70595 2.15326 1.87923 1.92573 2.11482C1.6982 2.35041 1.53544 2.64036 1.4531 2.95675C0.94163 4.92956 1.52702 7.40741 3.25685 10.3911C4.98413 13.3707 6.84395 15.1134 8.81338 15.6615C9.13125 15.7497 9.46663 15.7544 9.78688 15.6753C10.1071 15.5961 10.4014 15.4357 10.6409 15.2098L11.3945 14.4992C11.5813 14.323 11.6975 14.0854 11.7216 13.8304C11.7456 13.5754 11.6759 13.3203 11.5254 13.1126L10.4379 11.611C10.3081 11.4319 10.1252 11.2977 9.91493 11.2273C9.70465 11.1569 9.4775 11.1538 9.26538 11.2185L7.55339 11.7405C6.55933 12.0349 5.65703 11.2388 4.68846 9.56802C4.03595 8.44287 3.73179 7.57152 3.8074 6.8939C3.84734 6.54198 4.01131 6.21712 4.2713 5.97518L5.54063 4.79674C5.70293 4.64617 5.8138 4.44878 5.85769 4.23227C5.90157 4.01576 5.87627 3.791 5.78533 3.58954L5.01897 1.89252C4.9132 1.65853 4.72561 1.47082 4.49113 1.36436C4.25666 1.2579 3.99131 1.23996 3.74453 1.31388L2.75217 1.61166Z" fill="#FF5E3A"/>
+                        </svg>
+                        <p class="admin-account-profile-mail">{{x.pod_phone}}</p>
+                    </div>
+                </div>
+            </div>
+            <button class="admin-account-password-btn" data-bs-toggle="modal" data-bs-target="#staticPassword">Change Password</button>
+        </div>
+        <button class="admin-account-edit-btn" data-bs-toggle="modal" data-bs-target="#profileEditPopUp">Edit</button>
+
+        <div class="admin-account-delete-div">
+            <h1 class="admin-account-delete-heading">Delete Account</h1>
+            <button id="deletePencilIcon" style="display:block" class="delete-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16"   height="16" fill="#ff5e3a" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                </svg>
+            </button>
+        </div>
+        <p class="admin-account-delete-description" style="display:block;" id="deleteDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+        <textarea id="deleteText" name="deleteText" cols="70" rows="6" style="display:none;text-align:start;" class="admin-account-textarea-fields"></textarea>
+
+        <button class="admin-account-delete-btn" data-bs-toggle="modal" data-bs-target="#staticDelete">Delete Account</button>
+    </div>
+    {% endfor %}
+    <!-- Delete Modal -->
+    <div class="modal fade" id="staticDelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="admin-delete-pop-bg-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                      <path d="M32.4879 0C14.547 0 0 14.547 0 32.4879C0 50.4288 14.547 64.9758 32.4879 64.9758C50.4288 64.9758 64.9758 50.4288 64.9758 32.4879C64.9758 14.547 50.4288 0 32.4879 0ZM32.4879 59.4645C17.5928 59.4645 5.51134 47.3831 5.51134 32.4879C5.51134 17.5928 17.5928 5.51134 32.4879 5.51134C47.3831 5.51134 59.4645 17.5928 59.4645 32.4879C59.4645 47.3831 47.3831 59.4645 32.4879 59.4645Z" fill="#FF5E3A"/>
+                      <path d="M29 19.725C29 20.6482 29.3667 21.5335 30.0195 22.1863C30.6723 22.8391 31.5577 23.2058 32.4808 23.2058C33.404 23.2058 34.2894 22.8391 34.9422 22.1863C35.595 21.5335 35.9617 20.6482 35.9617 19.725C35.9617 18.8018 35.595 17.9164 34.9422 17.2637C34.2894 16.6109 33.404 16.2441 32.4808 16.2441C31.5577 16.2441 30.6723 16.6109 30.0195 17.2637C29.3667 17.9164 29 18.8018 29 19.725ZM34.2213 27.847H30.7404C30.4213 27.847 30.1603 28.108 30.1603 28.4271V48.1519C30.1603 48.471 30.4213 48.7321 30.7404 48.7321H34.2213C34.5404 48.7321 34.8014 48.471 34.8014 48.1519V28.4271C34.8014 28.108 34.5404 27.847 34.2213 27.847Z" fill="#FF5E3A"/>
+                  </svg>
+                  <h1 class="admin-delete-pop-heading">Delete Account</h1>
+                  <p class="admin-delete-pop-text">This will delete your account permanently.Are you Sure?</p>
+                  <div class="d-flex" style="margin-top:20px;">
+                      <button class="admin-delete-pop-yes-btn">Yes</button>
+                      <button class="admin-delete-pop-no-btn" data-bs-dismiss="modal" aria-label="Close">No</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Change password Modal -->
+    <div class="modal fade" id="staticPassword" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="admin-delete-pop-bg-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                      <path d="M32.4879 0C14.547 0 0 14.547 0 32.4879C0 50.4288 14.547 64.9758 32.4879 64.9758C50.4288 64.9758 64.9758 50.4288 64.9758 32.4879C64.9758 14.547 50.4288 0 32.4879 0ZM32.4879 59.4645C17.5928 59.4645 5.51134 47.3831 5.51134 32.4879C5.51134 17.5928 17.5928 5.51134 32.4879 5.51134C47.3831 5.51134 59.4645 17.5928 59.4645 32.4879C59.4645 47.3831 47.3831 59.4645 32.4879 59.4645Z" fill="#FF5E3A"/>
+                      <path d="M29 19.725C29 20.6482 29.3667 21.5335 30.0195 22.1863C30.6723 22.8391 31.5577 23.2058 32.4808 23.2058C33.404 23.2058 34.2894 22.8391 34.9422 22.1863C35.595 21.5335 35.9617 20.6482 35.9617 19.725C35.9617 18.8018 35.595 17.9164 34.9422 17.2637C34.2894 16.6109 33.404 16.2441 32.4808 16.2441C31.5577 16.2441 30.6723 16.6109 30.0195 17.2637C29.3667 17.9164 29 18.8018 29 19.725ZM34.2213 27.847H30.7404C30.4213 27.847 30.1603 28.108 30.1603 28.4271V48.1519C30.1603 48.471 30.4213 48.7321 30.7404 48.7321H34.2213C34.5404 48.7321 34.8014 48.471 34.8014 48.1519V28.4271C34.8014 28.108 34.5404 27.847 34.2213 27.847Z" fill="#FF5E3A"/>
+                  </svg>
+                  <h1 class="admin-delete-pop-heading">Change Password</h1>
+                  <form method="post" action="{% url 'podadmin:podadmin_change_password' %}" class="mt-4 mb-4">
+                    {% csrf_token %}
+                      <div class="admin-account-change-password-div">
+                          <label for="oldPassword" class="admin-account-input-text">Old password<span style="color:#DA1884;">*</span></label>
+                          <input type="password" id="oldPassword" name="oldPassword" class="admin-account-input-fields" />
+                      </div>
+                      <div class="admin-account-change-password-div">
+                          <label for="password" class="admin-account-input-text">Password<span style="color:#DA1884;">*</span></label>
+                          <input type="password" id="password" name="password" class="admin-account-input-fields" />
+                      </div>
+                      <p class="admin-account-change-password-instructions">Please use only Alphabets and Numbers in your password. Use special characters like '*', '@', '$' etc</p>
+                      <div class="admin-account-change-password-div">
+                          <label for="confirmPassword" class="admin-account-input-text">Confirm new password<span style="color:#DA1884;">*</span></label>
+                          <input type="password" id="confirmPassword" name="confirmPassword" class="admin-account-input-fields" />
+                      </div>
+                      <div class="admin-account-delete-btn-div">
+                         <button type="submit" class="admin-account-delete-btn">Change Password</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile edit Modal -->
+    {% for x in admin_account %}
+    <div class="modal fade" id="profileEditPopUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editClipsPopUpLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editClipsPopUpLabel">Personal Information</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form class="admin-label-form" style="padding: 0px 30px;">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="admin-account-pop-img-div">
+                                     <div class="admin-account-profile-img-div">
+                                        <img src="{% static 'adminImages/Ellipse 1.svg' %}" alt="image" class="admin-account-profile-img"/>
+                                    </div>
+                                    <label for="profileImage" class="popup-profile-img">
+                                        <input type="file" id="profileImage" name="profileImage" hidden/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#FF5E3A" class="bi bi-camera" viewBox="0 0 16 16">
+                                          <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z"/>
+                                          <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="admin-label-input-bg-container">
+                                    <label for="username" class="admin-label-input-heading">User Name</label>
+                                    <input type="text" id="username" name="username" class="admin-label-input-fields" />
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="admin-label-input-bg-container">
+                                    <label for="mail" class="admin-label-input-heading">E-mail</label>
+                                    <input type="text" id="mail" name="mail" class="admin-label-input-fields" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="admin-label-input-bg-container">
+                                    <label for="firstname" class="admin-label-input-heading">First Name</label>
+                                    <input type="text" id="firstname" name="firstname" class="admin-label-input-fields" />
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="admin-label-input-bg-container">
+                                    <label for="lastname" class="admin-label-input-heading">Last Name</label>
+                                    <input type="text" id="lastname" name="lastname" class="admin-label-input-fields" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="admin-label-input-bg-container">
+                                    <label for="phoneNumber" class="admin-label-input-heading">Phone Number</label>
+                                    <input type="text" id="phoneNumber" name="phoneNumber" class="admin-label-input-fields" />
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="admin-label-input-bg-container">
+                                    <label for="website" class="admin-label-input-heading">Website</label>
+                                    <input type="text" id="website" name="website" class="admin-label-input-fields" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="admin-label-input-bg-container">
+                                    <label for="country" class="admin-label-input-heading">Country</label>
+                                    <select id="country" name="country" class="admin-label-input-fields">
+                                        <option value="India">India</option>
+                                        <option value="USA">USA</option>
+                                        <option value="UK">UK</option>
+                                        <option value="Srilanka">Srilanka</option>
+                                        <option value="Bangladesh">Bangladesh</option>
+                                        <option value="Nepal">Nepal</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="admin-label-input-bg-container">
+                                    <label for="state" class="admin-label-input-heading">State</label>
+                                    <select id="state" name="state" class="admin-label-input-fields">
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="admin-label-input-bg-container">
+                                    <label for="city" class="admin-label-input-heading">City</label>
+                                    <select id="city" name="city" class="admin-label-input-fields">
+                                        <option value="Vishakapatnam">Vishakapatnam</option>
+                                        <option value="Itanagar">Itanagar</option>
+                                        <option value="Dispur">Dispur</option>
+                                        <option value="Patna">Patna</option>
+                                        <option value="Raipur">Raipur</option>
+                                        <option value="Panaji">Panaji</option>
+                                        <option value="Gandhinagar">Gandhinagar</option>
+                                        <option value="Chandigarh">Chandigarh</option>
+                                        <option value="Shimla">Shimla</option>
+                                        <option value="Ranchi">Ranchi</option>
+                                        <option value="Bengaluru">Bengaluru</option>
+                                        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                                        <option value="Bhopal">Bhopal</option>
+                                        <option value="Mumbai">Mumbai</option>
+                                        <option value="Imphal">Imphal</option>
+                                        <option value="Shilong">Shilong</option>
+                                        <option value="Aizawl">Aizawl</option>
+                                        <option value="Kohima">Kohima</option>
+                                        <option value="Bhubaneswar">Bhubaneswar</option>
+                                        <option value="Chandigarh">Chandigarh</option>
+                                        <option value="Jaipur">Jaipur</option>
+                                        <option value="Gangtok">Gangtok</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Hyderabad">Hyderabad</option>
+                                        <option value="Agartala">Agartala</option>
+                                        <option value="Uttar Pradesh">Dehradun</option>
+                                        <option value="Kolkata">Kolkata</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="admin-label-input-bg-container">
+                                    <label for="about" class="admin-label-input-heading">About</label>
+                                    <textarea type="text" id="about" name="about" rows="6" cols="100" class="admin-label-textarea-fields"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="admin-fb-twitter-bg-container">
+                                    <div class="admin-fb-twitter-div">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blue" class="bi bi-facebook" viewBox="0 0 16 16">
+                                          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                        </svg>
+                                    </div>
+                                    <input id="facebook" name="facebook" class="facebook-input" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="admin-fb-twitter-bg-container">
+                                    <div class="admin-fb-twitter-div">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#000" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                        </svg>
+                                    </div>
+                                    <input id="twitter" name="twitter" class="facebook-input" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="admin-account-pop-img-div mt-4 mb-4">
+                                     <button type="submit" class="admin-account-delete-btn">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </form>
+          </div>
+      </div>
+    </div>
+    {% endfor %}
+
+
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+{% extends "producer_base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block header %}
+<div class="producer-content-main-bg-container">
+    <div class="producer-content-top-text-div">
+        <p class="producer-label-main-heading">Statistics</p>
+    </div>
+    <h1 class="producer-label-main-heading">Jawan</h1>
+    <div class="producer-statistics-bg-container">
+        <div class="container-fluid">
+
+            <div class="row mb-5">
+                <div class="col-12 col-md-4">
+                     <div class="stats-views-bg-container">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="margin-left:10px;" viewBox="0 0 50 50" fill="none">
+                              <g clip-path="url(#clip0_2329_789)">
+                                <path d="M17 23C21.05 23 24.717 21 28 17C24.717 13 21.05 11 17 11C12.95 11 9.283 13 6 17C9.283 21 12.95 23 17 23Z" stroke="#FF5E3A" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M17 20C17.7956 20 18.5587 19.6839 19.1213 19.1213C19.6839 18.5587 20 17.7956 20 17C20 16.2044 19.6839 15.4413 19.1213 14.8787C18.5587 14.3161 17.7956 14 17 14C16.2044 14 15.4413 14.3161 14.8787 14.8787C14.3161 15.4413 14 16.2044 14 17C14 17.7956 14.3161 18.5587 14.8787 19.1213C15.4413 19.6839 16.2044 20 17 20Z" fill="#FF5E3A"/>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_2329_789">
+                                  <rect width="32.8417" height="32.8417" fill="white" transform="translate(0.527344 0.724243)"/>
+                                </clipPath>
+                              </defs>
+                         </svg>
+                         <div class="stats-views-text-div">
+                             <p>All Over Viewers</p>
+                             <h1>1300K
+                                 <span>
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
+                                          <path d="M0 6L6 0L12 6H0Z" fill="#05CD99"/>
+                                     </svg>
+                                 </span>
+                                 <span class="stats-views-nums">+2.45%</span>
+                             </h1>
+                         </div>
+                     </div>
+                </div>
+                <div class="col-12 col-md-4">
+                     <div class="stats-views-bg-container">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="margin-left:10px;" viewBox="0 0 50 50" fill="none">
+                              <g clip-path="url(#clip0_2329_789)">
+                                <path d="M17 23C21.05 23 24.717 21 28 17C24.717 13 21.05 11 17 11C12.95 11 9.283 13 6 17C9.283 21 12.95 23 17 23Z" stroke="#FF5E3A" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M17 20C17.7956 20 18.5587 19.6839 19.1213 19.1213C19.6839 18.5587 20 17.7956 20 17C20 16.2044 19.6839 15.4413 19.1213 14.8787C18.5587 14.3161 17.7956 14 17 14C16.2044 14 15.4413 14.3161 14.8787 14.8787C14.3161 15.4413 14 16.2044 14 17C14 17.7956 14.3161 18.5587 14.8787 19.1213C15.4413 19.6839 16.2044 20 17 20Z" fill="#FF5E3A"/>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_2329_789">
+                                  <rect width="32.8417" height="32.8417" fill="white" transform="translate(0.527344 0.724243)"/>
+                                </clipPath>
+                              </defs>
+                         </svg>
+                         <div class="stats-views-text-div">
+                             <p>Last Week Viewers</p>
+                             <h1>1300K
+                                 <span>
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
+                                          <path d="M12 0L6 6L0 0L12 0Z" fill="#FF0000"/>
+                                     </svg>
+                                 </span>
+                                 <span class="stats-views-nums" style="color:#FF0000;">+2.45%</span>
+                             </h1>
+                         </div>
+                     </div>
+                </div>
+                <div class="col-12 col-md-4">
+                     <div class="stats-views-bg-container">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="margin-left:10px;" viewBox="0 0 50 50" fill="none">
+                              <g clip-path="url(#clip0_2329_789)">
+                                <path d="M17 23C21.05 23 24.717 21 28 17C24.717 13 21.05 11 17 11C12.95 11 9.283 13 6 17C9.283 21 12.95 23 17 23Z" stroke="#FF5E3A" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M17 20C17.7956 20 18.5587 19.6839 19.1213 19.1213C19.6839 18.5587 20 17.7956 20 17C20 16.2044 19.6839 15.4413 19.1213 14.8787C18.5587 14.3161 17.7956 14 17 14C16.2044 14 15.4413 14.3161 14.8787 14.8787C14.3161 15.4413 14 16.2044 14 17C14 17.7956 14.3161 18.5587 14.8787 19.1213C15.4413 19.6839 16.2044 20 17 20Z" fill="#FF5E3A"/>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_2329_789">
+                                  <rect width="32.8417" height="32.8417" fill="white" transform="translate(0.527344 0.724243)"/>
+                                </clipPath>
+                              </defs>
+                         </svg>
+                         <div class="stats-views-text-div">
+                             <p>Last 24 Hours Viewers</p>
+                             <h1>1300K
+                                 <span>
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
+                                          <path d="M0 6L6 0L12 6H0Z" fill="#05CD99"/>
+                                     </svg>
+                                 </span>
+                                 <span class="stats-views-nums">+2.45%</span>
+                             </h1>
+                         </div>
+                     </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="stats-regional-bg-container">
+                        <h1 class="stats-regional-head">Daily Traffic</h1>
+                        <hr/>
+                        <div class="stats-projection-bar-container">
+                            <canvas id="dailyBar" style="height: 300px; width: 90%;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12 col-md-4">
+                     <div class="stats-likes-bg-container">
+                         <div class="stats-likes-container">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"  viewBox="0 0 34 34" fill="none">
+                                  <g clip-path="url(#clip0_2329_738)">
+                                    <path d="M30.1191 15.739C30.6861 14.9847 31 14.0606 31 13.099C31 11.5735 30.1529 10.1295 28.7894 9.32425C28.4384 9.11698 28.0387 9.00789 27.6318 9.00827H19.5385L19.741 4.83257C19.7883 3.82347 19.4339 2.86533 18.7454 2.13484C18.4075 1.77478 17.9998 1.48831 17.5476 1.29312C17.0954 1.09794 16.6083 0.998182 16.1163 1.00003C14.3613 1.00003 12.8088 2.1892 12.343 3.89142L9.44387 14.4581H5.08C4.48263 14.4581 4 14.944 4 15.5453V27.9128C4 28.5141 4.48263 29 5.08 29H25.3739C25.6844 29 25.9881 28.9388 26.2683 28.8165C27.8748 28.1268 28.9109 26.5469 28.9109 24.7937C28.9109 24.3656 28.8501 23.9443 28.7286 23.5366C29.2956 22.7823 29.6095 21.8582 29.6095 20.8966C29.6095 20.4685 29.5488 20.0472 29.4273 19.6395C29.9943 18.8852 30.3081 17.9611 30.3081 16.9995C30.3014 16.5714 30.2406 16.1467 30.1191 15.739ZM6.43 26.5537V16.9044H9.16375V26.5537H6.43ZM27.9085 14.56L27.1694 15.2056L27.6385 16.0686C27.7931 16.3529 27.8732 16.6721 27.8714 16.9961C27.8714 17.5567 27.6284 18.0902 27.2099 18.4571L26.4708 19.1027L26.9399 19.9657C27.0944 20.2499 27.1746 20.5692 27.1728 20.8932C27.1728 21.4538 26.9298 21.9873 26.5113 22.3542L25.7721 22.9998L26.2413 23.8628C26.3958 24.147 26.4759 24.4662 26.4741 24.7903C26.4741 25.5514 26.0286 26.2377 25.3401 26.5503H11.3238V16.7957L14.6819 4.54716C14.7685 4.23322 14.9544 3.95625 15.2114 3.75822C15.4684 3.56019 15.7825 3.45188 16.1061 3.44973C16.3626 3.44973 16.6158 3.52447 16.8182 3.67737C17.1524 3.92879 17.3313 4.30933 17.311 4.71365L16.987 11.4546H27.598C28.1988 11.8249 28.57 12.4501 28.57 13.099C28.57 13.6596 28.327 14.1897 27.9085 14.56Z" fill="#FF5E3A"/>
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2329_738">
+                                      <rect width="32.8417" height="32.8417" fill="white" transform="translate(0.527344 0.724243)"/>
+                                    </clipPath>
+                                  </defs>
+                             </svg>
+                             <div class="stats-views-text-div ml-4">
+                                 <p>Likes</p>
+                                 <h1>1200K</h1>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+                <div class="col-12 col-md-4">
+                     <div class="stats-likes-bg-container">
+                         <div class="stats-likes-container">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                                  <path d="M26.5 25.7929L21.9536 21.2464L21.8071 21.1H21.6H2.7C2.09129 21.1 1.58227 20.8889 1.14601 20.4526C0.709754 20.0164 0.499265 19.508 0.500002 18.9006V18.9V2.7C0.500002 2.09129 0.711086 1.58228 1.14736 1.14601C1.58361 0.709754 2.09198 0.499265 2.69939 0.500002H2.7H24.3C24.9087 0.500002 25.4177 0.711085 25.854 1.14736C26.2902 1.58361 26.5007 2.09198 26.5 2.69939V2.7V25.7929ZM2.7 2.2H2.2V2.7V18.9V19.4H2.7H22.5066L23.9464 20.8398L24.8 21.6934V20.4862V2.7V2.2H24.3H2.7Z" fill="#FF5E3A" stroke="#FF5E3A"/>
+                             </svg>
+                             <div class="stats-views-text-div ml-4">
+                                 <p>Comments</p>
+                                 <h1>120K</h1>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+                <div class="col-12 col-md-4">
+                     <div class="stats-likes-bg-container">
+                         <div class="stats-likes-container">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"  viewBox="0 0 34 34" fill="none">
+                                  <g clip-path="url(#clip0_2329_756)">
+                                    <path d="M10 22V13C10 12.175 10.294 11.4685 10.882 10.8805C11.47 10.2925 12.176 9.999 13 10H25.225L21.3625 6.1375L23.5 4L31 11.5L23.5 19L21.3625 16.9L25.225 13H13V22H10ZM7 31C6.175 31 5.4685 30.706 4.8805 30.118C4.2925 29.53 3.999 28.824 4 28V5.5H7V28H25V22H28V28C28 28.825 27.706 29.5315 27.118 30.1195C26.53 30.7075 25.824 31.001 25 31H7Z" fill="#FF5E3A"/>
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2329_756">
+                                      <rect width="32.8417" height="32.8417" fill="white" transform="translate(0.527344 0.724243)"/>
+                                    </clipPath>
+                                  </defs>
+                             </svg>
+                             <div class="stats-views-text-div ml-4">
+                                 <p>Shares</p>
+                                 <h1>1100K</h1>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+                <!--<div class="col-12 col-md-3">
+                     <div class="stats-likes-bg-container">
+                         <div class="stats-likes-container">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" style="margin-left:30px;" viewBox="0 0 34 34" fill="none">
+                                  <g clip-path="url(#clip0_2329_765)">
+                                    <path d="M19.3333 24V27.3333C19.3333 27.7754 19.1577 28.1993 18.8452 28.5118C18.5326 28.8244 18.1087 29 17.6667 29H6L1 34V17.3333C1 16.8913 1.17559 16.4674 1.48816 16.1548C1.80072 15.8423 2.22464 15.6667 2.66667 15.6667H6M31 22.3333L26 17.3333H14.3333C13.8913 17.3333 13.4674 17.1577 13.1548 16.8452C12.8423 16.5326 12.6667 16.1087 12.6667 15.6667V5.66667C12.6667 5.22464 12.8423 4.80072 13.1548 4.48816C13.4674 4.17559 13.8913 4 14.3333 4H29.3333C29.7754 4 30.1993 4.17559 30.5118 4.48816C30.8244 4.80072 31 5.22464 31 5.66667V22.3333Z" stroke="#FF5E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2329_765">
+                                      <rect width="32.8417" height="32.8417" fill="white" transform="translate(0.527344 0.724243)"/>
+                                    </clipPath>
+                                  </defs>
+                             </svg>
+                             <div class="stats-views-text-div ml-4">
+                                 <p>Messages</p>
+                                 <h1>100K</h1>
+                             </div>
+                         </div>
+                     </div>
+                </div>-->
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12 col-md-6">
+                    <div class="stats-regional-bg-container">
+                        <h1 class="stats-regional-head">Daily Comments</h1>
+                        <hr/>
+                        <div class="stats-pie-chart-bg-container">
+                            <div class="stats-pie-chart-container">
+                                <div class="stats-pie-chart-outer">
+                                    <div class="stats-pie-chart-inner">
+                                        <p id="pieNumber">70</p><span class="pie-percentage">%</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="pie-chart-svg" version="1.1" width="200px" height="200px">
+                                     <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="blue" />
+                                            <stop offset="100%" stop-color="blue" />
+                                        </linearGradient>
+                                     </defs>
+                                     <circle id="pieCircle" cx="100" cy="100" r="90" stroke-linecap="round" />
+                                </svg>
+
+                                <p class="pie-chart-text">Users Comments</p>
+                                <p class="pie-chart-sub-text"><span id="pieChartText"></span>% of Users that visit your profile comment on your posts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="stats-regional-bg-container">
+                        <h1 class="stats-regional-head">Region Traffic Details</h1>
+                        <hr/>
+                         <div class="stats-regional-containers">
+                             <h3>Regional Name 1</h3>
+                             <p style="color:red;">26.75%</p>
+                         </div>
+                        <div class="stats-regional-containers">
+                             <h3>Regional Name 1</h3>
+                             <p style="color:blue;">26.75%</p>
+                         </div>
+                        <div class="stats-regional-containers">
+                             <h3>Regional Name 1</h3>
+                             <p style="color:#42E4CE;">26.75%</p>
+                         </div>
+                        <div class="stats-regional-containers">
+                             <h3>Regional Name 1</h3>
+                             <p style="color:green;">26.75%</p>
+                         </div>
+                        <div class="stats-regional-containers">
+                             <h3>Regional Name 1</h3>
+                             <p style="color:black;">26.75%</p>
+                         </div>
+                        <div class="stats-regional-containers">
+                             <h3>Regional Name 1</h3>
+                             <p style="color:gray;">26.75%</p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12 col-md-6">
+                    <div class="stats-regional-bg-container">
+                        <h1 class="stats-regional-head">Campaign Analysis</h1>
+                        <hr/>
+                        <div class="stats-analysis-bg-container">
+                            <div class="stats-analysis-div">
+                                <div class="stats-analysis-sub-div" id="stats-analysis-div">
+
+                                </div>
+                            </div>
+                            <p class="stats-analysis-text" id="stats-analysis-percentage">80%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="stats-regional-bg-container">
+                        <h1 class="stats-regional-head">Worldwide Stats</h1>
+                        <hr/>
+                        <div class="stats-world-map-bg-container">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/World_map_blank_gmt.svg/5365px-World_map_blank_gmt.svg.png" alt="image" class="stats-world-map" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12 col-md-6">
+                    <div class="stats-regional-bg-container">
+                        <h1 class="stats-regional-head">Ciny Ranking</h1>
+                        <hr/>
+                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="stats-rank-container">
+                                    <h1>346</h1>
+                                    <h2><span style="color:#ff5e3a;">Your</span> Movie Rank</h2>
+                                    <p>Cinystore Ranking is based on the quantity and quality of the Interaction of users on your label</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="stats-rank-container">
+                                    <h1>248</h1>
+                                    <h2><span style="color:#ff5e3a;">Olympus</span> Posts Rank</h2>
+                                    <p>Cinystore Ranking is based on the quantity and quality of the Interaction of users on your label</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="stats-rank-container">
+                                    <h1>711</h1>
+                                    <h2><span style="color:#ff5e3a;">Your</span> Posts Rank</h2>
+                                    <p>Cinystore Ranking is based on the quantity and quality of the Interaction of users on your label</p>
+                                </div>
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="28" viewBox="0 0 17 28" fill="none">
+                                  <path d="M5.87994 13.6537L5.51025 14.0125L5.87994 14.3713L15.8966 24.093C16.7011 24.8738 16.7011 26.1275 15.8966 26.9083C15.0838 27.6972 13.7659 27.6972 12.953 26.9083L1.10336 15.4076C0.298882 14.6269 0.298882 13.3731 1.10336 12.5924L12.953 1.09168C13.7651 0.303526 15.0813 0.302773 15.8943 1.08942C16.6829 1.87734 16.6944 3.15779 15.8966 3.93203L5.87994 13.6537Z" fill="#A3AED0" stroke="white"/>
+                              </svg>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="28" viewBox="0 0 17 28" fill="none">
+                              <path d="M11.1201 14.3463L11.4897 13.9875L11.1201 13.6287L1.10336 3.90698C0.298882 3.1262 0.298882 1.87247 1.10336 1.09168C1.91621 0.302774 3.23414 0.302774 4.04699 1.09168L15.8966 12.5924C16.7011 13.3731 16.7011 14.6269 15.8966 15.4076L4.04699 26.9083C3.23491 27.6965 1.91873 27.6972 1.10569 26.9106C0.317144 26.1227 0.305626 24.8422 1.10336 24.068L11.1201 14.3463Z" fill="#A3AED0" stroke="white"/>
+                            </svg>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="stats-regional-bg-container">
+                        <h1 class="stats-regional-head">Projection Bar</h1>
+                        <hr/>
+                        <div class="stats-projection-bar-container">
+                            <canvas id="projectionBar" style="height: 300px; width: 90%;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--scripts-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+</body>
+</html>

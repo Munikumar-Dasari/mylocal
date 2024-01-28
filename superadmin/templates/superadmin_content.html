@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+{% extends "superadmin_base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block header %}
+<div class="admin-content-main-bg-container">
+    <div class="admin-content-top-text-div">
+        <h1 class="admin-content-top-text">Content</h1>
+        <a href="#">
+            <button class="admin-content-top-btn">Create Label</button>
+        </a>
+    </div>
+    <div class="admin-content-main-text-bg-container">
+         <div class="admin-content-headings-container">
+             <button id="labelsBtn" class="admin-content-headings-btn">Labels</button>
+             <button id="postsBtn" class="admin-content-headings-btn">Posts</button>
+             <button id="clipsBtn" class="admin-content-headings-btn">Clips</button>
+         </div>
+         <div class="admin-content-headings-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="12" viewBox="0 0 21 12" fill="none">
+                  <path d="M19.95 2.11765H1.05C0.771523 2.11765 0.504451 2.00609 0.307538 1.80753C0.110625 1.60896 0 1.33964 0 1.05882C0 0.778006 0.110625 0.50869 0.307538 0.310122C0.504451 0.111554 0.771523 0 1.05 0H19.95C20.2285 0 20.4955 0.111554 20.6925 0.310122C20.8894 0.50869 21 0.778006 21 1.05882C21 1.33964 20.8894 1.60896 20.6925 1.80753C20.4955 2.00609 20.2285 2.11765 19.95 2.11765ZM16.45 7.05882H4.55C4.27152 7.05882 4.00445 6.94727 3.80754 6.7487C3.61062 6.55013 3.5 6.28082 3.5 6C3.5 5.71918 3.61062 5.44987 3.80754 5.2513C4.00445 5.05273 4.27152 4.94118 4.55 4.94118H16.45C16.7285 4.94118 16.9955 5.05273 17.1925 5.2513C17.3894 5.44987 17.5 5.71918 17.5 6C17.5 6.28082 17.3894 6.55013 17.1925 6.7487C16.9955 6.94727 16.7285 7.05882 16.45 7.05882ZM12.25 12H8.75C8.47152 12 8.20445 11.8884 8.00754 11.6899C7.81062 11.4913 7.7 11.222 7.7 10.9412C7.7 10.6604 7.81062 10.391 8.00754 10.1925C8.20445 9.99391 8.47152 9.88235 8.75 9.88235H12.25C12.5285 9.88235 12.7955 9.99391 12.9925 10.1925C13.1894 10.391 13.3 10.6604 13.3 10.9412C13.3 11.222 13.1894 11.4913 12.9925 11.6899C12.7955 11.8884 12.5285 12 12.25 12Z" fill="#606464"/>
+              </svg>
+         </div>
+    </div>
+    <div class="admin-content-scroll-container" id="labels">
+        <div class="admin-each-content-div">
+            <div class="admin-each-content-img-div">
+                <img src="{% static 'business/adminImages/image 11.png' %}" alt="image" class="admin-each-content-img"/>
+            </div>
+            <div class="admin-each-content-text-div">
+                <h1 class="admin-each-content-text-head">SKYDOG</h1>
+                <div class="admin-each-content-text-sub-head-div">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M2.22222 5H3.33333V6.11111H2.22222V5ZM10 2.22222V10C10 10.6111 9.5 11.1111 8.88889 11.1111H1.11111C0.816426 11.1111 0.533811 10.994 0.325437 10.7857C0.117063 10.5773 0 10.2947 0 10L0.00555555 2.22222C0.00555555 1.61111 0.494444 1.11111 1.11111 1.11111H1.66667V0H2.77778V1.11111H7.22222V0H8.33333V1.11111H8.88889C9.5 1.11111 10 1.61111 10 2.22222ZM1.11111 3.33333H8.88889V2.22222H1.11111V3.33333ZM8.88889 10V4.44444H1.11111V10H8.88889ZM6.66667 6.11111H7.77778V5H6.66667V6.11111ZM4.44444 6.11111H5.55556V5H4.44444V6.11111Z" fill="#42E4CE"/>
+                    </svg>
+                    <h2 class="admin-each-content-text-sub-head">Created on : Nov, 16, 2023</h2>
+                </div>
+                <p class="admin-each-content-description">
+                     A man is driven by a personal vendetta to rectify the wrongs in society...
+                </p>
+            </div>
+           
+            <a href="{% url 'admin_add_post' %}">
+                <button class="admin-each-content-buttons">Approve</button>
+            </a>
+            <a href="{% url 'admin_add_clips' %}">
+                <button class="admin-each-content-buttons">Decline</button>
+            </a>
+            <a href="{% url 'admin_statistics' %}">
+                <button class="admin-each-content-buttons" style="background-color:#000;margin-right:0px;">statistics</button>
+            </a>
+        </div>
+      
+    </div>
+    <div class="admin-content-scroll-container" id="posts">
+        <div class="admin-each-content-div">
+            <div class="d-flex">
+                <div class="admin-each-content-img-div">
+                    <img src="{% static 'business/adminImages/image 12.png' %}" alt="image" class="admin-each-content-img"/>
+                </div>
+                <div class="admin-each-content-text-div">
+                    <h1 class="admin-each-content-text-head">SKYDOG</h1>
+                    <div class="admin-each-content-text-sub-head-div">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                          <path d="M2.22222 5H3.33333V6.11111H2.22222V5ZM10 2.22222V10C10 10.6111 9.5 11.1111 8.88889 11.1111H1.11111C0.816426 11.1111 0.533811 10.994 0.325437 10.7857C0.117063 10.5773 0 10.2947 0 10L0.00555555 2.22222C0.00555555 1.61111 0.494444 1.11111 1.11111 1.11111H1.66667V0H2.77778V1.11111H7.22222V0H8.33333V1.11111H8.88889C9.5 1.11111 10 1.61111 10 2.22222ZM1.11111 3.33333H8.88889V2.22222H1.11111V3.33333ZM8.88889 10V4.44444H1.11111V10H8.88889ZM6.66667 6.11111H7.77778V5H6.66667V6.11111ZM4.44444 6.11111H5.55556V5H4.44444V6.11111Z" fill="#42E4CE"/>
+                        </svg>
+                        <h2 class="admin-each-content-text-sub-head">Created on : Nov, 16, 2023</h2>
+                    </div>
+                    <p class="admin-each-content-description">
+                         A man is driven by a personal vendetta to rectify the wrongs in society...
+                        <span>
+                            <a href="#"  style="color:#FF5E3A;text-decoration:none">
+                                 Read More
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex">
+               
+                <a href="{% url 'admin_add_post' %}">
+                    <button class="admin-each-content-buttons">Approve</button>
+                </a>
+                <a href="{% url 'admin_add_clips' %}">
+                    <button class="admin-each-content-buttons">Decline</button>
+                </a>
+               
+                <a href="{% url 'admin_statistics' %}">
+                    <button class="admin-each-content-buttons mr-4" style="background-color:#000;margin-right:0px;">statistics</button>
+                </a>
+            </div>
+        </div>
+       
+       
+    </div>
+    <div class="admin-content-scroll-container" id="clips">
+        <div class="admin-each-content-div">
+            <div class="d-flex">
+                <div class="admin-each-content-img-div">
+                    <video
+                        id="my-video1"
+                        class="video-js"
+                        controls
+                        preload="auto"
+                        poster="https://images.news18.com/ibnlive/uploads/2022/03/rrr--16476120183x2.jpg"
+                        data-setup="{}"
+                        style="height:100%;width:100%;"
+                      >
+                        <source src="https://youtu.be/_vktceH8ZA0?si=Kxmv_FEl0LZKFYAh" type="video/mp4" />
+
+                        <p class="vjs-no-js">
+                          To view this video please enable JavaScript, and consider upgrading to a
+                          web browser that
+                          <a href="https://videojs.com/html5-video-support/" target="_blank"
+                            >supports HTML5 video</a
+                          >
+                        </p>
+                   </video>
+                </div>
+                <div class="admin-each-content-text-div">
+                    <h1 class="admin-each-content-text-head">SKYDOG</h1>
+                    <div class="admin-each-content-text-sub-head-div">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                          <path d="M2.22222 5H3.33333V6.11111H2.22222V5ZM10 2.22222V10C10 10.6111 9.5 11.1111 8.88889 11.1111H1.11111C0.816426 11.1111 0.533811 10.994 0.325437 10.7857C0.117063 10.5773 0 10.2947 0 10L0.00555555 2.22222C0.00555555 1.61111 0.494444 1.11111 1.11111 1.11111H1.66667V0H2.77778V1.11111H7.22222V0H8.33333V1.11111H8.88889C9.5 1.11111 10 1.61111 10 2.22222ZM1.11111 3.33333H8.88889V2.22222H1.11111V3.33333ZM8.88889 10V4.44444H1.11111V10H8.88889ZM6.66667 6.11111H7.77778V5H6.66667V6.11111ZM4.44444 6.11111H5.55556V5H4.44444V6.11111Z" fill="#42E4CE"/>
+                        </svg>
+                        <h2 class="admin-each-content-text-sub-head">Created on : Nov, 16, 2023</h2>
+                    </div>
+                    <p class="admin-each-content-description">
+                         A man is driven by a personal vendetta to rectify the wrongs in society...
+                        <span>
+                            <a href="#"  style="color:#FF5E3A;text-decoration:none">
+                                 Read More
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <a href="{% url 'admin_add_post' %}">
+                    <button class="admin-each-content-buttons">Approve</button>
+                </a>
+                <a href="{% url 'admin_add_clips' %}">
+                    <button class="admin-each-content-buttons">Decline</button>
+                </a>
+                <a href="{% url 'admin_statistics' %}">
+                    <button class="admin-each-content-buttons mr-4" style="background-color:#000;margin-right:0px;">statistics</button>
+                </a>
+            </div>
+        </div>
+       
+    </div>
+
+    <!-- Label Delete Modal -->
+    <div class="modal fade" id="labelDelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="admin-delete-pop-bg-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                      <path d="M32.4879 0C14.547 0 0 14.547 0 32.4879C0 50.4288 14.547 64.9758 32.4879 64.9758C50.4288 64.9758 64.9758 50.4288 64.9758 32.4879C64.9758 14.547 50.4288 0 32.4879 0ZM32.4879 59.4645C17.5928 59.4645 5.51134 47.3831 5.51134 32.4879C5.51134 17.5928 17.5928 5.51134 32.4879 5.51134C47.3831 5.51134 59.4645 17.5928 59.4645 32.4879C59.4645 47.3831 47.3831 59.4645 32.4879 59.4645Z" fill="#FF5E3A"/>
+                      <path d="M29 19.725C29 20.6482 29.3667 21.5335 30.0195 22.1863C30.6723 22.8391 31.5577 23.2058 32.4808 23.2058C33.404 23.2058 34.2894 22.8391 34.9422 22.1863C35.595 21.5335 35.9617 20.6482 35.9617 19.725C35.9617 18.8018 35.595 17.9164 34.9422 17.2637C34.2894 16.6109 33.404 16.2441 32.4808 16.2441C31.5577 16.2441 30.6723 16.6109 30.0195 17.2637C29.3667 17.9164 29 18.8018 29 19.725ZM34.2213 27.847H30.7404C30.4213 27.847 30.1603 28.108 30.1603 28.4271V48.1519C30.1603 48.471 30.4213 48.7321 30.7404 48.7321H34.2213C34.5404 48.7321 34.8014 48.471 34.8014 48.1519V28.4271C34.8014 28.108 34.5404 27.847 34.2213 27.847Z" fill="#FF5E3A"/>
+                  </svg>
+                  <h1 class="admin-delete-pop-heading">Delete Label</h1>
+                  <p class="admin-delete-pop-text">This will delete your label permanently.Are you Sure?</p>
+                  <div class="d-flex" style="margin-top:20px;">
+                      <button class="admin-delete-pop-yes-btn">Yes</button>
+                      <button class="admin-delete-pop-no-btn" data-bs-dismiss="modal" aria-label="Close">No</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post Delete Modal -->
+    <div class="modal fade" id="postDelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="admin-delete-pop-bg-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                      <path d="M32.4879 0C14.547 0 0 14.547 0 32.4879C0 50.4288 14.547 64.9758 32.4879 64.9758C50.4288 64.9758 64.9758 50.4288 64.9758 32.4879C64.9758 14.547 50.4288 0 32.4879 0ZM32.4879 59.4645C17.5928 59.4645 5.51134 47.3831 5.51134 32.4879C5.51134 17.5928 17.5928 5.51134 32.4879 5.51134C47.3831 5.51134 59.4645 17.5928 59.4645 32.4879C59.4645 47.3831 47.3831 59.4645 32.4879 59.4645Z" fill="#FF5E3A"/>
+                      <path d="M29 19.725C29 20.6482 29.3667 21.5335 30.0195 22.1863C30.6723 22.8391 31.5577 23.2058 32.4808 23.2058C33.404 23.2058 34.2894 22.8391 34.9422 22.1863C35.595 21.5335 35.9617 20.6482 35.9617 19.725C35.9617 18.8018 35.595 17.9164 34.9422 17.2637C34.2894 16.6109 33.404 16.2441 32.4808 16.2441C31.5577 16.2441 30.6723 16.6109 30.0195 17.2637C29.3667 17.9164 29 18.8018 29 19.725ZM34.2213 27.847H30.7404C30.4213 27.847 30.1603 28.108 30.1603 28.4271V48.1519C30.1603 48.471 30.4213 48.7321 30.7404 48.7321H34.2213C34.5404 48.7321 34.8014 48.471 34.8014 48.1519V28.4271C34.8014 28.108 34.5404 27.847 34.2213 27.847Z" fill="#FF5E3A"/>
+                  </svg>
+                  <h1 class="admin-delete-pop-heading">Delete Post</h1>
+                  <p class="admin-delete-pop-text">This will delete your post permanently.Are you Sure?</p>
+                  <div class="d-flex" style="margin-top:20px;">
+                      <button class="admin-delete-pop-yes-btn">Yes</button>
+                      <button class="admin-delete-pop-no-btn" data-bs-dismiss="modal" aria-label="Close">No</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clip Delete Modal -->
+    <div class="modal fade" id="clipDelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="admin-delete-pop-bg-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                      <path d="M32.4879 0C14.547 0 0 14.547 0 32.4879C0 50.4288 14.547 64.9758 32.4879 64.9758C50.4288 64.9758 64.9758 50.4288 64.9758 32.4879C64.9758 14.547 50.4288 0 32.4879 0ZM32.4879 59.4645C17.5928 59.4645 5.51134 47.3831 5.51134 32.4879C5.51134 17.5928 17.5928 5.51134 32.4879 5.51134C47.3831 5.51134 59.4645 17.5928 59.4645 32.4879C59.4645 47.3831 47.3831 59.4645 32.4879 59.4645Z" fill="#FF5E3A"/>
+                      <path d="M29 19.725C29 20.6482 29.3667 21.5335 30.0195 22.1863C30.6723 22.8391 31.5577 23.2058 32.4808 23.2058C33.404 23.2058 34.2894 22.8391 34.9422 22.1863C35.595 21.5335 35.9617 20.6482 35.9617 19.725C35.9617 18.8018 35.595 17.9164 34.9422 17.2637C34.2894 16.6109 33.404 16.2441 32.4808 16.2441C31.5577 16.2441 30.6723 16.6109 30.0195 17.2637C29.3667 17.9164 29 18.8018 29 19.725ZM34.2213 27.847H30.7404C30.4213 27.847 30.1603 28.108 30.1603 28.4271V48.1519C30.1603 48.471 30.4213 48.7321 30.7404 48.7321H34.2213C34.5404 48.7321 34.8014 48.471 34.8014 48.1519V28.4271C34.8014 28.108 34.5404 27.847 34.2213 27.847Z" fill="#FF5E3A"/>
+                  </svg>
+                  <h1 class="admin-delete-pop-heading">Delete Clip</h1>
+                  <p class="admin-delete-pop-text">This will delete your clip permanently.Are you Sure?</p>
+                  <div class="d-flex" style="margin-top:20px;">
+                      <button class="admin-delete-pop-yes-btn">Yes</button>
+                      <button class="admin-delete-pop-no-btn" data-bs-dismiss="modal" aria-label="Close">No</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Create Label Form Modal -->
+    <div class="modal fade" id="editLabelPopUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editLabelPopUpLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editLabelPopUpLabel">Create Label</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form class="admin-label-form">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="movieName" class="admin-label-input-heading">Movie Name*</label>
+                        <input type="text" id="movieName" name="movieName" class="admin-label-input-fields" placeholder="Enter movie name" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="genre" class="admin-label-input-heading">Genre*</label>
+                        <select id="genre" class="admin-label-input-fields">
+                            <option>Comedy, Drama</option>
+                            <option>Horror, Comedy</option>
+                            <option>Scifi</option>
+                            <option>Thriller, Comedy</option>
+                            <option>Action, Comedy</option>
+                            <option>Action, Drama, Historic</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                     <div class="admin-label-input-bg-container">
+                        <label for="language" class="admin-label-input-heading">Language*</label>
+                        <select id="language" class="admin-label-input-fields">
+                            <option>Telugu</option>
+                            <option>Hindi</option>
+                            <option>Kannada</option>
+                            <option>Malayalam</option>
+                            <option>Tamil</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                     <div class="admin-label-input-bg-container">
+                        <label for="otherLanguage" class="admin-label-input-heading">Other Languages*</label>
+                        <select id="otherLanguage" class="admin-label-input-fields">
+                            <option>Telugu</option>
+                            <option>Hindi</option>
+                            <option>Kannada</option>
+                            <option>Malayalam</option>
+                            <option>Tamil</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="productionHouse" class="admin-label-input-heading">Production House*</label>
+                        <input type="text" id="productionHouse" name="productionHouse" class="admin-label-input-fields" placeholder="Enter production house" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="admin" class="admin-label-input-heading">admin*</label>
+                        <input type="text" id="admin" name="admin" class="admin-label-input-fields" placeholder="Enter admin" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="director" class="admin-label-input-heading">Director*</label>
+                        <input type="text" id="director" name="director" class="admin-label-input-fields" placeholder="Enter director" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="musicDirector" class="admin-label-input-heading">Music Director*</label>
+                        <input type="text" id="musicDirector" name="musicDirector" class="admin-label-input-fields" placeholder="Enter music director" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="lyricist" class="admin-label-input-heading">Lyricist</label>
+                        <input type="text" id="lyricist" name="lyricist" class="admin-label-input-fields" placeholder="Enter lyricist" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="singers" class="admin-label-input-heading">Singers</label>
+                        <input type="text" id="singers" name="singers" class="admin-label-input-fields" placeholder="Enter singers" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="cast" class="admin-label-input-heading">Cast*</label>
+                        <input type="text" id="cast" name="cast" class="admin-label-input-fields" placeholder="Enter cast" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="choreographers" class="admin-label-input-heading">Choreographers</label>
+                        <input type="text" id="choreographers" name="choreographers" class="admin-label-input-fields" placeholder="Enter choreographers" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="scriptWriter" class="admin-label-input-heading">Script Writer</label>
+                        <input type="text" id="scriptWriter" name="scriptWriter" class="admin-label-input-fields" placeholder="Enter script writer" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="editor" class="admin-label-input-heading">Editor</label>
+                        <input type="text" id="editor" name="editor" class="admin-label-input-fields" placeholder="Enter editor" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="cinematographer" class="admin-label-input-heading">Cinematographer</label>
+                        <input type="text" id="cinematographer" name="cinematographer" class="admin-label-input-fields" placeholder="Enter cinematographer" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="runtime" class="admin-label-input-heading">Runtime</label>
+                        <input type="text" id="runtime" name="runtime" class="admin-label-input-fields" placeholder="Enter runtime" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="filmCertification" class="admin-label-input-heading">Film Certification</label>
+                        <select id="filmCertification" class="admin-label-input-fields">
+                            <option>U</option>
+                            <option>A</option>
+                            <option>U/A</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="distributor" class="admin-label-input-heading">Distributor</label>
+                        <input type="text" id="distributor" name="distributor" class="admin-label-input-fields" placeholder="Enter distributor" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="recordingStudio" class="admin-label-input-heading">Recording Studio</label>
+                        <input type="text" id="recordingStudio" name="recordingStudio" class="admin-label-input-fields" placeholder="Enter recording studio" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="budget" class="admin-label-input-heading">Budget</label>
+                        <input type="text" id="budget" name="budget" class="admin-label-input-fields" placeholder="Enter budget" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="releaseDate" class="admin-label-input-heading">Release Date*</label>
+                        <input type="date" id="releaseDate" name="releaseDate" class="admin-label-input-fields" placeholder="Enter release date" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="trailerLink" class="admin-label-input-heading">Trailer Link*</label>
+                        <input type="text" id="trailerLink" name="trailerLink" class="admin-label-input-fields" placeholder="Enter trailer link" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="uploadPoster" class="admin-label-input-heading">Upload Posters*</label>
+                        <label class='admin-label-upload-text'>
+                            <input id="uploadPoster" name="uploadPoster" type="file" hidden/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                              <path d="M24.5 17.5V22.1667C24.5 22.7855 24.2542 23.379 23.8166 23.8166C23.379 24.2542 22.7855 24.5 22.1667 24.5H5.83333C5.21449 24.5 4.621 24.2542 4.18342 23.8166C3.74583 23.379 3.5 22.7855 3.5 22.1667V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.8337 9.33333L14.0003 3.5L8.16699 9.33333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14 3.5V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Upload file
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="uploadBanner" class="admin-label-input-heading">Upload Banner*</label>
+                        <label class='admin-label-upload-text'>
+                            <input id="uploadBanner" name="uploadBanner" type="file" hidden/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                              <path d="M24.5 17.5V22.1667C24.5 22.7855 24.2542 23.379 23.8166 23.8166C23.379 24.2542 22.7855 24.5 22.1667 24.5H5.83333C5.21449 24.5 4.621 24.2542 4.18342 23.8166C3.74583 23.379 3.5 22.7855 3.5 22.1667V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.8337 9.33333L14.0003 3.5L8.16699 9.33333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14 3.5V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Upload file
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="cgTeam" class="admin-label-input-heading">CG Team</label>
+                        <input type="text" id="cgTeam" name="cgTeam" class="admin-label-input-fields" placeholder="Enter CG team" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="urlName" class="admin-label-input-heading">URL name</label>
+                        <input type="text" id="urlName" name="budget" class="admin-label-input-fields" placeholder="Enter url name" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="admin-label-input-bg-container">
+                        <label for="synopsis" class="admin-label-input-heading">Synopsis/Plotline*</label>
+                        <textarea type="text" id="synopsis" name="synopsis" rows="6" cols="100" class="admin-label-textarea-fields" placeholder="Enter synopsis"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="admin-label-btn">Upload</button>
+    </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post Form Modal -->
+    <div class="modal fade" id="editPostsPopUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editPostsPopUpLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editPostsPopUpLabel">Post</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form class="admin-label-form">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="admin-label-input-bg-container">
+                                <label for="movieNamePost" class="admin-label-input-heading">Movie Name*</label>
+                                <input type="text" id="movieNamePost" name="movieNamePost" class="admin-label-input-fields" placeholder="Enter movie name" />
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="admin-label-input-bg-container">
+                                <label for="genrePost" class="admin-label-input-heading">Genre*</label>
+                                <select id="genrePost" class="admin-label-input-fields">
+                                    <option>Comedy, Drama</option>
+                                    <option>Horror, Comedy</option>
+                                    <option>Scifi</option>
+                                    <option>Thriller, Comedy</option>
+                                    <option>Action, Comedy</option>
+                                    <option>Action, Drama, Historic</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="admin-label-input-bg-container">
+                                <label for="languagePost" class="admin-label-input-heading">Language*</label>
+                                <select id="languagePost" class="admin-label-input-fields">
+                                    <option>Telugu</option>
+                                    <option>Hindi</option>
+                                    <option>Kannada</option>
+                                    <option>Malayalam</option>
+                                    <option>Tamil</option>
+                                    <option>English</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="admin-label-input-bg-container">
+                                <label for="headingPost" class="admin-label-input-heading">Heading</label>
+                                <input type="text" id="headingPost" name="headingPost" class="admin-label-input-fields" placeholder="Enter heading" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="admin-label-input-bg-container">
+                                <label for="descriptionPost" class="admin-label-input-heading">Enter Description text</label>
+                                <textarea type="text" id="descriptionPost" name="descriptionPost" rows="8" cols="100" class="admin-label-textarea-fields" placeholder="Enter text here"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="admin-label-input-bg-container">
+                                <label for="uploadPosterPost" class="admin-label-input-heading">Upload banner/thumbnail</label>
+                                <label class='admin-label-upload-text'>
+                                    <input id="uploadPosterPost" name="uploadPosterPost" type="file" hidden/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                      <path d="M24.5 17.5V22.1667C24.5 22.7855 24.2542 23.379 23.8166 23.8166C23.379 24.2542 22.7855 24.5 22.1667 24.5H5.83333C5.21449 24.5 4.621 24.2542 4.18342 23.8166C3.74583 23.379 3.5 22.7855 3.5 22.1667V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M19.8337 9.33333L14.0003 3.5L8.16699 9.33333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M14 3.5V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Upload file
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="admin-label-btn">Upload</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clips Form Modal -->
+    <div class="modal fade" id="editClipsPopUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editClipsPopUpLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editClipsPopUpLabel">Clips</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form class="admin-label-form">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="movieNameClip" class="admin-label-input-heading">Movie Name*</label>
+                        <input type="text" id="movieNameClip" name="movieName" class="admin-label-input-fields" placeholder="Enter movie name" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="genreClip" class="admin-label-input-heading">Genre*</label>
+                        <select id="genreClip" class="admin-label-input-fields">
+                            <option>Comedy, Drama</option>
+                            <option>Horror, Comedy</option>
+                            <option>Scifi</option>
+                            <option>Thriller, Comedy</option>
+                            <option>Action, Comedy</option>
+                            <option>Action, Drama, Historic</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="languageClip" class="admin-label-input-heading">Language*</label>
+                        <select id="languageClip" class="admin-label-input-fields">
+                            <option>Telugu</option>
+                            <option>Hindi</option>
+                            <option>Kannada</option>
+                            <option>Malayalam</option>
+                            <option>Tamil</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="admin-label-input-bg-container">
+                        <label for="headingClip" class="admin-label-input-heading">Heading</label>
+                        <input type="text" id="headingClip" name="headingClip" class="admin-label-input-fields" placeholder="Enter heading" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="admin-label-input-bg-container">
+                        <label for="descriptionClip" class="admin-label-input-heading">Enter Description text</label>
+                        <textarea type="text" id="descriptionClip" name="descriptionClip" rows="8" cols="100" class="admin-label-textarea-fields" placeholder="Enter text here"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <div class="admin-label-input-bg-container">
+                        <label for="uploadClip" class="admin-label-input-heading">Upload Clip</label>
+                        <label class='admin-label-upload-text'>
+                            <input id="uploadClip" name="uploadClip" type="file" hidden/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                              <path d="M24.5 17.5V22.1667C24.5 22.7855 24.2542 23.379 23.8166 23.8166C23.379 24.2542 22.7855 24.5 22.1667 24.5H5.83333C5.21449 24.5 4.621 24.2542 4.18342 23.8166C3.74583 23.379 3.5 22.7855 3.5 22.1667V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.8337 9.33333L14.0003 3.5L8.16699 9.33333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14 3.5V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Upload file
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="admin-label-input-bg-container">
+                        <label for="uploadPosterClip" class="admin-label-input-heading">Upload banner/thumbnail</label>
+                        <label class='admin-label-upload-text'>
+                            <input id="uploadPosterClip" name="uploadPosterClip" type="file" hidden/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                              <path d="M24.5 17.5V22.1667C24.5 22.7855 24.2542 23.379 23.8166 23.8166C23.379 24.2542 22.7855 24.5 22.1667 24.5H5.83333C5.21449 24.5 4.621 24.2542 4.18342 23.8166C3.74583 23.379 3.5 22.7855 3.5 22.1667V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.8337 9.33333L14.0003 3.5L8.16699 9.33333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14 3.5V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Upload file
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="admin-label-btn">Upload</button>
+    </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</div>
+{% endblock %}
+</body>
+</html>

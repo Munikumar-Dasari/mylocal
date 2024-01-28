@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% extends "keepitshortbase.html" %}
+{% load static %}
+<html lang="en">
+<body>
+{% block header %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-7">
+                <div class="kis-signup-bg-img">
+                    <img src="{% static 'keepitshortcss/keep_it_short_images/kis_banner_logo.png' %}" alt="image" style="height:100%;width:100%;" >
+                </div>
+            </div>
+            <div class="col-12 col-md-5">
+                <div class="kis-signup-bg-container">
+                    <div class="kis-login-heading-container">
+                        <h1 class="kis-signup-main-heading">Welcome to Cinystore</h1>
+                        <p class="kis-signup-description">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                            a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="kis-signup-form">
+                        <div class="row mb-2">
+                            <div class="col-12 col-md-6">
+                                <div class="kis-signup-input-container">
+                                    <lable for="instituteName" class="kis-signup-input-text">Institute Name</lable>
+                                    <div class="kis-signup-input-fields-container">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                        </svg>
+                                        <input type="text" id="instituteName" name="instituteName" class="kis-signup-input-fields" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="kis-signup-input-container">
+                                    <lable for="mail" class="kis-signup-input-text">E-mail</lable>
+                                    <div class="kis-signup-input-fields-container">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                          <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                                        </svg>
+                                         <input type="text" id="mail" name="mail" class="kis-signup-input-fields" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-12 col-md-6">
+                                <div class="kis-signup-input-container">
+                                    <lable for="password" class="kis-signup-input-text">Password</lable>
+                                    <div class="kis-signup-input-fields-container">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" class="bi bi-person-fill-lock" viewBox="0 0 16 16">
+                                          <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5v-1a1.9 1.9 0 0 1 .01-.2 4.49 4.49 0 0 1 1.534-3.693C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4m7 0a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1"/>
+                                        </svg>
+                                        <input type="password" id="password" name="password" class="kis-signup-input-fields" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="kis-signup-input-container">
+                                    <lable for="confirm-password" class="kis-signup-input-text">Confirm Password</lable>
+                                    <div class="kis-signup-input-fields-container">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" class="bi bi-person-fill-lock" viewBox="0 0 16 16">
+                                          <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5v-1a1.9 1.9 0 0 1 .01-.2 4.49 4.49 0 0 1 1.534-3.693C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4m7 0a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1"/>
+                                        </svg>
+                                         <input type="password" id="confirm-password" name="confirm-password" class="kis-signup-input-fields" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-12">
+                                <div class="kis-signup-checkbox-container">
+                                    <input type="checkbox" id="checkbox" class="kis-signup-checkbox"/>
+                                    <label for="checkbox" class="kis-signup-checkbox-text">
+                                        I agree to the
+                                        <a href="#" class="kis-a-text">terms</a> and
+                                        <a href="#" class="kis-a-text">Privacy Policy</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="kis-signup-btn-container">
+                                    <a href="{% url 'keepitshort:kis_institute_details' %}">
+                                        <button class="kis-signup-btn">Sign Up</button>
+                                    </a>
+                                </div>
+                                <p class="kis-signup-sub-text">Already have an account?
+                                    <a href="{% url 'keepitshort:kis_institute_login' %}" class="kis-a-text">login</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+<!--scripts-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

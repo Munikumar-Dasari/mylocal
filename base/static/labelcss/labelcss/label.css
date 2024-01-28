@@ -1,0 +1,36 @@
+/*..........public feed...............*/
+
+.public-feed-main-bg-container{height:auto;width:100%;padding:10px 100px;display:flex;}
+.public-feed-bg-container{height:82vh;width:100%;overflow:auto;padding:10px;}
+.public-feed-bg-container::-webkit-scrollbar {display: none;}
+
+.public-feed-each-container{width:100%;height:auto;padding:50px 30px;display:flex;justify-content:space-between;border-radius: 4px;border-bottom: 1px solid gray;box-shadow: 1px 1px 10px 1px #000;margin-top:10px;}
+.public-feed-each-container1{width:100%;height:auto;padding:50px 30px;display:flex;align-items:center;border-radius: 4px;border-bottom: 1px solid gray;box-shadow: 1px 1px 10px 1px #000;margin-top:10px;}
+.public-feed-content-bg-container{width:70%;height:auto;margin-right:20px;flex-wrap:wrap;}
+.public-feed-review-bg-container{width:100%;height:auto;margin-right:20px;flex-wrap:wrap;}
+.public-feed-content-profile-div{display: flex;align-items: center;margin-bottom:45px;}
+.public-feed-content-profile-img{height: 40px;width: 40px;border-radius: 100px;margin-right: 12px;}
+.public-feed-content-profile-text-div h1{color: #FFF;text-align: center;/*font-family: 'Poppins';*/font-size: 18px;font-style: normal;font-weight: 600;line-height: normal;letter-spacing: 0.8px;}
+.public-feed-content-profile-text-div button{height: 36px;width: 190px;border-width: 0px;border-radius: 40px;background: #6EAB7D;color: #FFF;font-weight: 600;font-size: 13px;}
+.public-feed-content-movie-text{color: #FFF;font-family: inheirt;font-size: 14px;font-style: normal;font-weight: 400;line-height: 1.4;letter-spacing:0.4px;}
+.public-feed-icons-bg-container{border-radius: 100px;border: 1px solid #665D5D;opacity: 0.7;background: #070A0B;width: 320px;height: 45px;padding: 24px 15px;margin-top: 50px;display: flex;align-items: center;justify-content: space-around;}
+.public-feed-icon-div{display: flex;align-items: center;}
+.public-feed-icon-div p{color: #A3ADAF;font-size: 14px;font-style: normal;font-weight: 600;line-height: 18px;letter-spacing: -0.08px;margin-bottom: -2px;margin-left: 3px;}
+.public-feed-content-img-div{width:30%;height:100%;}
+.public-feed-content-img{width:100%;height:auto;border-radius:15px;}
+
+
+
+@media (max-width:767px){
+    .public-feed-main-bg-container{padding:10px 10px;}
+    .public-feed-each-container{padding:25px 20px;flex-direction:column;}
+    .public-feed-content-bg-container{width:100%;margin-right:0px;}
+    .public-feed-content-profile-div{margin-bottom:25px;}
+    .public-feed-content-profile-div h1{font-size:12px;}
+    .public-feed-content-profile-div button{height: 28px;width: 130px;font-size: 10px;}
+    .public-feed-icons-bg-container{width:290px;}
+    .public-feed-content-img-div{width:100%;}
+    .public-feed-each-container1 {padding:25px 20px;flex-direction:column;}
+}
+
+/*..........public feed...............*/

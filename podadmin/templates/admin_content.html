@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+{% extends "admin_base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block header %}
+
+<div class="admin-content-main-bg-container">
+    <div class="admin-content-top-text-div">
+        <h1 class="admin-content-top-text">Content</h1>
+       
+    </div>
+    <div class="admin-content-main-text-bg-container">
+         <div class="admin-content-headings-container">
+             <button id="labelsBtn" class="admin-content-headings-btn">Labels</button>
+             <button id="postsBtn" class="admin-content-headings-btn">Posts</button>
+             <button id="clipsBtn" class="admin-content-headings-btn">Clips</button>
+         </div>
+         <div class="admin-content-headings-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="12" viewBox="0 0 21 12" fill="none">
+                  <path d="M19.95 2.11765H1.05C0.771523 2.11765 0.504451 2.00609 0.307538 1.80753C0.110625 1.60896 0 1.33964 0 1.05882C0 0.778006 0.110625 0.50869 0.307538 0.310122C0.504451 0.111554 0.771523 0 1.05 0H19.95C20.2285 0 20.4955 0.111554 20.6925 0.310122C20.8894 0.50869 21 0.778006 21 1.05882C21 1.33964 20.8894 1.60896 20.6925 1.80753C20.4955 2.00609 20.2285 2.11765 19.95 2.11765ZM16.45 7.05882H4.55C4.27152 7.05882 4.00445 6.94727 3.80754 6.7487C3.61062 6.55013 3.5 6.28082 3.5 6C3.5 5.71918 3.61062 5.44987 3.80754 5.2513C4.00445 5.05273 4.27152 4.94118 4.55 4.94118H16.45C16.7285 4.94118 16.9955 5.05273 17.1925 5.2513C17.3894 5.44987 17.5 5.71918 17.5 6C17.5 6.28082 17.3894 6.55013 17.1925 6.7487C16.9955 6.94727 16.7285 7.05882 16.45 7.05882ZM12.25 12H8.75C8.47152 12 8.20445 11.8884 8.00754 11.6899C7.81062 11.4913 7.7 11.222 7.7 10.9412C7.7 10.6604 7.81062 10.391 8.00754 10.1925C8.20445 9.99391 8.47152 9.88235 8.75 9.88235H12.25C12.5285 9.88235 12.7955 9.99391 12.9925 10.1925C13.1894 10.391 13.3 10.6604 13.3 10.9412C13.3 11.222 13.1894 11.4913 12.9925 11.6899C12.7955 11.8884 12.5285 12 12.25 12Z" fill="#606464"/>
+              </svg>
+         </div>
+    </div>
+   
+    <!-- <div class="admin-content-empty-container">
+        <img src="{% static 'adminImages/image 119.png' %}" alt="image" class="admin-content-empty-img" />
+       <p class="admin-content-empty-text">You have not created any label yet.Please create label.</p>
+   </div> -->
+   <div class="admin-content-scroll-container" id="labels">
+
+        {% for x in labelcontent %}
+		{% if forloop.counter <= 100 %}
+		{% if forloop.first %}
+        
+            {% endif %}
+   
+
+
+        <div class="admin-each-content-div">
+            <div class="admin-each-content-img-div">
+                {% if x.Poster %}
+                <img src="{{ x.Poster.url }}" alt="{{ x.Movie_name }} Poster" class="admin-each-content-img"/>
+                {% else %}
+                <p>No poster available</p>
+            {% endif %}
+            </div>
+            <div class="admin-each-content-text-div">
+                <h1 class="admin-each-content-text-head">
+                    <a href="{% url 'podadmin:reviewlabel' x.Movie_name %}" target="_blank">{{ x.Movie_name }}
+                    </a>
+                    </h1>
+                <div class="admin-each-content-text-sub-head-div">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M2.22222 5H3.33333V6.11111H2.22222V5ZM10 2.22222V10C10 10.6111 9.5 11.1111 8.88889 11.1111H1.11111C0.816426 11.1111 0.533811 10.994 0.325437 10.7857C0.117063 10.5773 0 10.2947 0 10L0.00555555 2.22222C0.00555555 1.61111 0.494444 1.11111 1.11111 1.11111H1.66667V0H2.77778V1.11111H7.22222V0H8.33333V1.11111H8.88889C9.5 1.11111 10 1.61111 10 2.22222ZM1.11111 3.33333H8.88889V2.22222H1.11111V3.33333ZM8.88889 10V4.44444H1.11111V10H8.88889ZM6.66667 6.11111H7.77778V5H6.66667V6.11111ZM4.44444 6.11111H5.55556V5H4.44444V6.11111Z" fill="#42E4CE"/>
+                    </svg>
+                    <h2 class="admin-each-content-text-sub-head">Created on : {{ x.timestamp_field }}</h2>
+                </div>
+                <p class="admin-each-content-description">
+                    {{ x.synopsis|slice:":40" }}...
+                </p>
+            </div>
+            
+            <a href="{% url 'podadmin:approve_label' x.Movie_name %}">
+                <button class="admin-each-content-buttons">Approve</button>
+            </a>
+            <a href="{% url 'podadmin:reject_label' x.Movie_name %}">
+                <button class="admin-each-content-buttons">Decline</button>
+            </a>
+            <a href="#">
+                <button class="admin-each-content-buttons" style="background-color:#000;margin-right:0px;">statistics</button>
+            </a>
+        </div>
+        {% if forloop.counter|divisibleby:100 %}
+    </div>
+    <div class="admin-each-content-div">
+        {% endif %}
+        {% if forloop.last %}
+    </div>
+{% endif %}
+{% endif %}
+{% endfor %}
+    </div>
+    <div class="admin-content-scroll-container" id="posts">
+        {% for x in Posts %}
+		{% if forloop.counter <= 100 %}
+		{% if forloop.first %}
+        <div>
+            {% endif %}
+        <div class="admin-each-content-div">
+            <div class="d-flex">
+                <div class="admin-each-content-img-div">
+                    {% if x.Image %}
+                    <img src="{{ x.Image.url }}" alt="image" class="admin-each-content-img"/>
+                    {% else %}
+                <p>No poster available</p>
+            {% endif %}
+                </div>
+                <div class="admin-each-content-text-div">
+                    <h1 class="admin-each-content-text-head">{{ x.Movie_name }}</h1>
+                    <div class="admin-each-content-text-sub-head-div">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                          <path d="M2.22222 5H3.33333V6.11111H2.22222V5ZM10 2.22222V10C10 10.6111 9.5 11.1111 8.88889 11.1111H1.11111C0.816426 11.1111 0.533811 10.994 0.325437 10.7857C0.117063 10.5773 0 10.2947 0 10L0.00555555 2.22222C0.00555555 1.61111 0.494444 1.11111 1.11111 1.11111H1.66667V0H2.77778V1.11111H7.22222V0H8.33333V1.11111H8.88889C9.5 1.11111 10 1.61111 10 2.22222ZM1.11111 3.33333H8.88889V2.22222H1.11111V3.33333ZM8.88889 10V4.44444H1.11111V10H8.88889ZM6.66667 6.11111H7.77778V5H6.66667V6.11111ZM4.44444 6.11111H5.55556V5H4.44444V6.11111Z" fill="#42E4CE"/>
+                        </svg>
+                        <h2 class="admin-each-content-text-sub-head">Created on : {{ x.timestamp_field }}</h2>
+                    </div>
+                    <p class="admin-each-content-description">
+                        {{ x.text|slice:":40" }}...
+                        <!-- <span>
+                            <a href="#"  style="color:#FF5E3A;text-decoration:none">
+                                 Read More
+                            </a>
+                        </span> -->
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <a href="{% url 'podadmin:approve_post' x.id %}">
+                    <button class="admin-each-content-buttons">Approve</button>
+                </a>
+                <a href="{% url 'podadmin:reject_post' x.id %}">
+                    <button class="admin-each-content-buttons">Decline</button>
+                </a>
+                <!-- <a href="{% url 'podadmin:admin_statistics' x.Movie_name %}">
+                    <button class="admin-each-content-buttons mr-4" style="background-color:#000;margin-right:0px;">statistics</button>
+                </a> -->
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:100 %}
+    </div>
+    <div class="admin-each-content-div">
+        {% endif %}
+        {% if forloop.last %}
+    </div>
+{% endif %}
+{% endif %}
+{% endfor %}
+    </div>
+    <div class="admin-content-scroll-container" id="clips">
+        {% for x in Clips %}
+		{% if forloop.counter <= 100 %}
+		{% if forloop.first %}
+        <div>
+            {% endif %}
+        <div class="admin-each-content-div">
+            <div class="d-flex">
+                <div class="admin-each-content-img-div">
+                    <video id="my-video" class="video-js admin-each-content-img" controls preload="auto" poster="#" data-setup="{}" style="height:100%;width:100%;" video>
+                        <source src="#" type="video/mp4"/> 
+                    </video>
+                </div>
+                <div class="admin-each-content-text-div">
+                    <h1 class="admin-each-content-text-head">
+                        <a href="{% url 'labels:promo_clip' x.Movie_name %}" target="_blank">
+                            {{ x.Movie_name }}
+                        </a>
+
+                    </h1>
+                    <div class="admin-each-content-text-sub-head-div">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                          <path d="M2.22222 5H3.33333V6.11111H2.22222V5ZM10 2.22222V10C10 10.6111 9.5 11.1111 8.88889 11.1111H1.11111C0.816426 11.1111 0.533811 10.994 0.325437 10.7857C0.117063 10.5773 0 10.2947 0 10L0.00555555 2.22222C0.00555555 1.61111 0.494444 1.11111 1.11111 1.11111H1.66667V0H2.77778V1.11111H7.22222V0H8.33333V1.11111H8.88889C9.5 1.11111 10 1.61111 10 2.22222ZM1.11111 3.33333H8.88889V2.22222H1.11111V3.33333ZM8.88889 10V4.44444H1.11111V10H8.88889ZM6.66667 6.11111H7.77778V5H6.66667V6.11111ZM4.44444 6.11111H5.55556V5H4.44444V6.11111Z" fill="#42E4CE"/>
+                        </svg>
+                        <h2 class="admin-each-content-text-sub-head">Created on : {{ x.timestamp_field }}</h2>
+                    </div>
+                    <p class="admin-each-content-description">
+                        {{ x.text|slice:":40" }}...
+                        <!-- <span>
+                            <a href="#"  style="color:#FF5E3A;text-decoration:none">
+                                 Read More
+                            </a>
+                        </span> -->
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <a href="{% url 'podadmin:approve_clips' x.id %}">
+                    <button class="admin-each-content-buttons">Approve</button>
+                </a>
+                <a href="{% url 'podadmin:reject_clips' x.id %}">
+                    <button class="admin-each-content-buttons">Decline</button>
+                </a>
+                <!-- <a href="{% url 'podadmin:admin_statistics' x.Movie_name %}">
+                    <button class="admin-each-content-buttons mr-4" style="background-color:#000;margin-right:0px;">statistics</button>
+                </a> -->
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:100 %}
+    </div>
+    <div class="admin-each-content-div">
+        {% endif %}
+        {% if forloop.last %}
+    </div>
+{% endif %}
+{% endif %}
+{% endfor %}
+    </div>
+
+
+
+     <!-- Label Delete Modal -->
+     <div class="modal fade" id="labelDelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="deleteLabelModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="admin-delete-pop-bg-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                        <path d="M32.4879 0C14.547 0 0 14.547 0 32.4879C0 50.4288 14.547 64.9758 32.4879 64.9758C50.4288 64.9758 64.9758 50.4288 64.9758 32.4879C64.9758 14.547 50.4288 0 32.4879 0ZM32.4879 59.4645C17.5928 59.4645 5.51134 47.3831 5.51134 32.4879C5.51134 17.5928 17.5928 5.51134 32.4879 5.51134C47.3831 5.51134 59.4645 17.5928 59.4645 32.4879C59.4645 47.3831 47.3831 59.4645 32.4879 59.4645Z" fill="#FF5E3A"/>
+                        <path d="M29 19.725C29 20.6482 29.3667 21.5335 30.0195 22.1863C30.6723 22.8391 31.5577 23.2058 32.4808 23.2058C33.404 23.2058 34.2894 22.8391 34.9422 22.1863C35.595 21.5335 35.9617 20.6482 35.9617 19.725C35.9617 18.8018 35.595 17.9164 34.9422 17.2637C34.2894 16.6109 33.404 16.2441 32.4808 16.2441C31.5577 16.2441 30.6723 16.6109 30.0195 17.2637C29.3667 17.9164 29 18.8018 29 19.725ZM34.2213 27.847H30.7404C30.4213 27.847 30.1603 28.108 30.1603 28.4271V48.1519C30.1603 48.471 30.4213 48.7321 30.7404 48.7321H34.2213C34.5404 48.7321 34.8014 48.471 34.8014 48.1519V28.4271C34.8014 28.108 34.5404 27.847 34.2213 27.847Z" fill="#FF5E3A"/>
+                    </svg>
+                    <h1 class="admin-delete-pop-heading">Delete Label</h1>
+                    <p class="admin-delete-pop-text">This will delete your label permanently.Are you Sure?</p>
+                    
+                    <div class="d-flex" style="margin-top:20px;">
+                        <button class="admin-delete-pop-yes-btn">Yes</button>
+                        <button class="admin-delete-pop-no-btn" data-bs-dismiss="modal" aria-label="Close">No</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Post Delete Modal -->
+      <div class="modal fade" id="postDelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="admin-delete-pop-bg-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                        <path d="M32.4879 0C14.547 0 0 14.547 0 32.4879C0 50.4288 14.547 64.9758 32.4879 64.9758C50.4288 64.9758 64.9758 50.4288 64.9758 32.4879C64.9758 14.547 50.4288 0 32.4879 0ZM32.4879 59.4645C17.5928 59.4645 5.51134 47.3831 5.51134 32.4879C5.51134 17.5928 17.5928 5.51134 32.4879 5.51134C47.3831 5.51134 59.4645 17.5928 59.4645 32.4879C59.4645 47.3831 47.3831 59.4645 32.4879 59.4645Z" fill="#FF5E3A"/>
+                        <path d="M29 19.725C29 20.6482 29.3667 21.5335 30.0195 22.1863C30.6723 22.8391 31.5577 23.2058 32.4808 23.2058C33.404 23.2058 34.2894 22.8391 34.9422 22.1863C35.595 21.5335 35.9617 20.6482 35.9617 19.725C35.9617 18.8018 35.595 17.9164 34.9422 17.2637C34.2894 16.6109 33.404 16.2441 32.4808 16.2441C31.5577 16.2441 30.6723 16.6109 30.0195 17.2637C29.3667 17.9164 29 18.8018 29 19.725ZM34.2213 27.847H30.7404C30.4213 27.847 30.1603 28.108 30.1603 28.4271V48.1519C30.1603 48.471 30.4213 48.7321 30.7404 48.7321H34.2213C34.5404 48.7321 34.8014 48.471 34.8014 48.1519V28.4271C34.8014 28.108 34.5404 27.847 34.2213 27.847Z" fill="#FF5E3A"/>
+                    </svg>
+                    <h1 class="admin-delete-pop-heading">Delete Post</h1>
+                    <p class="admin-delete-pop-text">This will delete your post permanently.Are you Sure?</p>
+                    <div class="d-flex" style="margin-top:20px;">
+                        <button class="admin-delete-pop-yes-btn">Yes</button>
+                        <button class="admin-delete-pop-no-btn" data-bs-dismiss="modal" aria-label="Close">No</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      
+  
+  
+</div> 
+
+{% endblock %}
+</body>
+</html>

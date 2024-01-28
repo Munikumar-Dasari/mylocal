@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load  static %}
+<head>
+    <link rel="stylesheet" href="{% static 'business/css/style.css' %}"/>
+    
+    <meta name="Description" content="Movies, Cinema, Posters, Promotion, Movie Promotion, films, Film Promotion, Cinema Promotion, Cinema website, Movie Website, Film Website, Movie Trailer, Movie Synopsis, Movie Information" />
+			<meta name="Keywords" content="Movie Trailer, Movie Synopsis, Movie Director, Movie Website, Movie Promotion, Movie Distribution,Cinema Trailer, Cinema Synopsis, Cinema Director, Cinema Website, Cinema Promotion, Cinema Distribution,Film Trailer, Film Synopsis, Film Director, Film Website, Film Promotion, Film Distribution,Films Trailer, Films Synopsis, Films Director, Films Website, Films Promotion, Films Distribution,Picture Trailer, Picture Synopsis, Picture Director, Picture Website, Picture Promotion, Picture Distribution" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<header>
+    <nav class="business-nav-container fixed-top">
+        
+            <div class="navbar-brand d-flex">
+                
+                <img src="https://www.cinystore.com/static/img/logo.webp" alt="logo" class="business-logo" />
+                <div>
+                    <h1 class="business-logo-name">CinyStore</h1>
+                    <p class="business-logo-name-description">Poora Filmy Hai Boos</p>
+                    <p class="business-logo-sub-description">Beta Version</p>
+                </div>
+            </div>
+        </nav>
+</header>
+<body class="business-body">
+   {% block header %}
+
+
+   {% endblock %}
+</body>
+</html>

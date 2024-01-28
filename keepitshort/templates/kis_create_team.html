@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% extends "kis_team_base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block header %}
+<div class="kis-content-main-bg-container">
+    <div class="kis-content-top-text-div">
+        <a href="{% url 'keepitshort:kis_team_dashboard' %}" class="kis-label-back-icon-div" style="text-decoration:none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+              <path d="M7 1L1 7L7 13" stroke="#1E1E2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Back</p>
+        </a>
+    </div>
+    <h1 class="kis-label-main-heading">Create a team</h1>
+    <form class="kis-label-form">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="kis-label-input-bg-container">
+                        <label for="teamName" class="kis-label-input-heading">Team Name</label>
+                        <input type="text" id="teamName" name="teamName" class="kis-label-input-fields" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="kis-label-input-bg-container">
+                        <label for="collegeName" class="kis-label-input-heading">College Name</label>
+                        <input type="text" id="collegeName" name="collegeName" class="kis-label-input-fields" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="kis-label-input-bg-container">
+                        <label for="leaderName" class="kis-label-input-heading">Leader Name</label>
+                        <input type="text" id="leaderName" name="leaderName" class="kis-label-input-fields" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="kis-label-input-bg-container">
+                        <label for="membersName" class="kis-label-input-heading">Team Member Names</label>
+                        <input type="text" id="membersName" name="membersName" class="kis-label-input-fields" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="kis-label-input-bg-container">
+                        <label for="genre" class="kis-label-input-heading">Content Genre</label>
+                        <input type="text" id="genre" name="genre" class="kis-label-input-fields" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="kis-label-input-bg-container">
+                        <label for="uploadPoster" class="kis-label-input-heading">Team Profile</label>
+                        <label class='kis-label-upload-text'>
+                            <input id="uploadPoster" name="uploadPoster" type="file" hidden/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                              <path d="M24.5 17.5V22.1667C24.5 22.7855 24.2542 23.379 23.8166 23.8166C23.379 24.2542 22.7855 24.5 22.1667 24.5H5.83333C5.21449 24.5 4.621 24.2542 4.18342 23.8166C3.74583 23.379 3.5 22.7855 3.5 22.1667V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.8337 9.33333L14.0003 3.5L8.16699 9.33333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14 3.5V17.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Upload image
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="kis-label-btn">Upload</button>
+    </form>
+</div>
+{% endblock %}
+</body>
+</html>

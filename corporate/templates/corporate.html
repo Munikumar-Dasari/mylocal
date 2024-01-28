@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+{% extends "corporate_base.html" %}
+{% load static %}
+<html lang="en">
+
+<body>
+{% block header %}
+    <div class="corporate-banner-bg-container" id="corporateBanner">
+        <div class="corporate-banner-text-container">
+           <h1 class="corporate-banner-text">Share, Connect, and Celebrate the World of Cinema with your audience.</h1>
+           <h4 class="corporate-banner-sub-text">Join the ultimate destination of movie lovers!</h4>
+       </div>
+        <div class="corporate-banner-empty-container d-none d-md-block">
+
+        </div>
+
+    </div>
+
+    <div class="corporate-about-bg-container" id="corporateAbout">
+        <h1 class="corporate-about-heading">About Cinystore</h1>
+        <p class="corporate-about-description">
+            being in the media & entertainment industry for more than 2 decades, we have seen and experienced how hard
+            it is for any filmmaker to reach out to a wider audience with their movie. out of the thousands of movies
+            churned out every year, only handfuls become blockbusters. and only a select few make real profits. we also
+            know for a fact that you don’t need big names for a movie to sell, as long as the content is good.
+        </p>
+        <p class="corporate-about-description">
+            cinystore is a platform to connect filmmakers of all formats of films with their audience worldwide,we've got
+            all the tools you need to get your movie noticed. you can share snazzy trailers, eye-catching posters, and social
+            media wizardry that would make even gandalf jealous. and the best part? you won't have to auction off your vintage
+            action figure collection to afford it!
+        </p>
+        <div class="corporate-about-card-bg">
+            <div class="container">
+                <div class="row mb-md-5">
+                    <div class="col-12 col-md-4">
+                        <div class="corporate-about-card">
+                            <div class="corporate-about-card-img-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 57 57" fill="none">
+                                    <path d="M10.4426 12.7582C9.91934 12.8807 10.2533 12.8584 9.81914 12.9141C7.95996 13.3148 9.34043 13.6711 10.4426 12.7582ZM43.1396 13.5041C43.2732 13.415 43.7408 12.9586 42.2824 12.5133C42.3715 12.9697 41.9818 12.9252 41.9818 13.1813C43.0617 14.1609 43.507 15.8643 44.8875 16.2205C45.1547 14.9959 43.6629 14.3947 43.1396 13.5041ZM9.45176 12.402C9.61875 13.3928 10.3646 11.3555 10.3758 10.6318C10.0863 10.7988 9.79688 10.9658 9.49629 11.0994C10.1977 11.4557 9.58535 11.8342 8.82832 12.402C7.29199 14.3168 10.2645 10.9102 9.45176 12.402ZM28.5 0C12.7582 0 0 12.7582 0 28.5C0 44.2307 12.7582 57 28.5 57C44.2418 57 57 44.2307 57 28.5C57 12.7582 44.2418 0 28.5 0ZM29.257 9.55195L29.3906 9.59648C28.8563 10.2867 32.1738 12.3018 29.7914 12.4688C27.5648 13.1033 30.7266 11.8898 29.001 12.1014C29.9139 10.8322 28.2773 10.81 29.257 9.55195ZM15.7418 11.3777C14.9402 10.7098 12.4242 12.2906 13.3037 11.9121C15.4857 11.0549 13.4484 12.0012 13.9605 13.0254C13.493 13.9939 13.8047 12.068 12.6469 13.2146C11.8119 13.4039 9.76348 15.2965 10.0195 14.7176C9.95273 15.6193 7.58145 16.6881 7.25859 18.191C6.4793 20.2729 7.06934 18.1131 6.92461 17.3004C5.81133 15.8865 3.78516 19.6939 4.38633 21.1969C5.39941 19.4156 5.32148 21.0076 4.58672 21.798C5.33262 23.1674 3.90762 24.9486 5.32148 25.9617C5.94492 26.1064 7.1918 23.8687 6.64629 26.1955C7.0248 24.1805 7.69277 26.6742 8.77266 26.1176C8.83945 27.1752 9.49629 26.6854 9.64102 27.9656C11.4445 27.832 13.0922 30.8824 10.9436 31.4613C11.2664 31.3723 11.901 31.94 12.6357 31.5059C13.8826 32.4967 17.1668 32.6191 17.2559 35.0684C14.9959 36.1482 16.6992 39.1096 14.7398 40.1672C12.491 39.8332 13.9717 42.9393 13.0254 42.583C13.4039 44.8207 10.7543 42.2936 11.7785 43.5293C13.66 44.6871 10.9547 44.4533 11.8008 45.2994C10.8545 45.099 12.3908 47.0584 12.6469 47.782C14.0051 49.9863 11.4779 47.2922 10.732 46.5574C10.0195 45.1324 8.33848 42.4049 7.8709 40.1672C7.60371 36.9164 5.0877 34.7344 4.50879 31.5615C3.92988 29.7914 6.10078 26.9525 4.93184 25.9617C3.91875 25.1713 4.33066 22.466 3.72949 21.041C5.23242 14.5283 10.0084 9.03984 15.7418 5.78906C15.1518 6.22324 19.115 4.66465 18.6586 5.04316C18.5361 5.32148 20.9742 3.98555 22.4438 3.78516C22.2879 3.80742 18.6252 5.12109 19.6383 4.94297C18.0686 5.71113 19.4824 5.27695 20.2617 4.8873C18.7031 6.03398 17.5008 5.71113 15.7307 6.72422C13.9494 7.1918 14.3168 9.03984 13.0477 9.96387C13.7936 10.0975 15.6639 8.03789 16.7549 7.31426C19.2598 6.10078 15.4857 9.51855 17.8682 8.04902C17.0666 8.79492 17.2336 9.98613 16.7437 10.3201C16.4988 10.2533 17.7123 10.899 15.7418 11.3777ZM19.6383 6.25664C19.3822 6.60176 19.026 7.34766 18.8145 6.89121C18.525 7.03594 18.4137 7.65938 17.8682 7.1584C18.191 6.92461 18.525 6.36797 17.8904 6.71309C18.1799 6.40137 20.7627 5.52187 20.618 5.18789C21.0744 4.89844 21.0299 4.75371 20.5066 4.93184C20.2395 4.84277 21.1412 4.08574 22.3436 3.98555C22.5105 3.98555 22.5773 4.09688 22.2768 4.06348C20.4621 4.62012 21.2414 4.46426 22.466 4.06348C21.9984 4.33066 21.6756 4.40859 21.5977 4.53105C22.8223 4.08574 21.5309 4.85391 21.8092 4.79824C21.4641 4.97637 21.8648 5.03203 21.1969 5.28809C21.3193 5.18789 20.1059 6.01172 20.8295 5.7668C20.1281 6.43477 19.8164 6.4459 19.6383 6.25664ZM20.707 7.84863C20.7293 6.77988 22.2656 6.10078 22.0764 6.04512C23.9689 5.15449 21.4195 6.07852 22.9113 5.27695C23.468 5.22129 24.648 3.44004 26.2846 3.32871C28.0881 2.7832 27.2531 3.36211 28.5891 2.85L28.3219 3.07266C28.0881 3.10605 28.3775 3.51797 27.5314 4.14141C27.4424 5.10996 25.9172 4.66465 26.6742 5.7C26.1844 4.99863 25.4496 5.67773 26.3736 5.74453C25.3828 6.50156 23.0783 6.63516 21.9762 7.89316C21.2637 8.91738 20.6068 8.59453 20.707 7.84863ZM28.6225 11.4111C27.8654 13.2369 27.1307 11.1439 28.4666 10.81C28.8006 10.9881 28.9342 11.0437 28.6225 11.4111ZM25.7725 7.75957C25.5498 6.93574 25.7279 7.36992 27.0527 6.98027C27.9656 7.63711 26.24 8.07129 25.7725 7.75957ZM46.5018 40.4344C45.4553 38.6309 47.7709 36.9609 48.5502 35.4469C48.45 37.217 48.2273 38.9648 46.5018 40.4344ZM50.4428 19.8275C49.3072 19.9166 48.283 20.1838 47.2588 19.5381C44.8986 16.9553 47.693 22.4549 48.4723 20.2061C51.2777 21.2748 48.4277 25.8838 46.6576 25.4051C45.6668 23.2676 44.4422 20.9186 42.2824 19.8721C43.9412 21.709 44.765 23.9689 46.5463 25.6277C46.6688 27.9434 49.0178 24.7816 48.873 26.574C49.0957 29.6578 45.3885 31.5059 46.0342 34.6008C47.4146 37.4174 43.3734 37.9295 43.8299 40.4566C42.2045 42.2713 40.4678 44.7205 37.551 44.3309C37.551 42.7945 36.7717 41.492 36.5936 39.9111C35.0127 37.9072 38.2635 35.7586 36.2484 33.6656C33.9217 33.1424 36.7271 29.9361 34.3336 30.2367C32.8975 28.8006 30.7934 30.1922 28.7338 30.2033C26.151 30.4482 23.4902 27.0305 24.6369 24.6146C23.724 22.0986 27.5314 21.3639 27.6316 19.1484C29.4574 17.6232 32.0514 17.8125 34.5229 17.4563C34.3447 19.2264 36.215 19.2375 37.6289 19.8275C38.4193 17.9127 40.8797 20.1393 42.5607 18.9258C43.1396 16.098 40.9242 17.8014 39.6551 16.8996C38.1188 14.6508 42.9393 15.7418 42.4383 14.5617C40.568 14.5506 41.6256 12.2572 40.3008 13.5375C41.492 13.749 40.0893 14.6842 40.1227 13.6154C38.3191 13.0922 40.0559 15.6639 39.143 15.9088C37.7514 15.3299 38.4082 16.5656 38.5529 16.7549C37.9518 18.0574 37.217 14.84 35.5137 14.9291C33.8215 13.3816 34.8457 15.6305 36.3152 15.9979C36.0035 16.0869 36.4934 17.3672 36.1037 16.8217C34.8902 15.1518 32.5857 14.0385 31.2164 16.0869C31.0717 18.0018 27.1752 18.5473 27.7986 16.3096C26.8857 13.9939 30.6264 16.2428 30.2812 14.3947C27.8766 12.8027 30.9381 13.3148 31.7508 11.823C33.5988 11.8787 31.8287 10.309 32.6971 9.85254C32.608 11.5559 34.1109 11.233 35.3022 10.9102C35.0127 9.93047 36.0146 9.96387 35.4023 9.15117C38.1633 8.04902 33.2982 9.66328 34.2779 7.24746C33.0867 6.42363 33.777 9.06211 34.2779 9.34043C34.3113 10.1531 33.6211 11.1551 32.6748 9.45176C31.2943 10.3535 31.4391 8.53887 31.35 8.72813C31.1941 8.02676 32.3965 7.99336 32.4076 6.76875C32.3074 5.98945 32.3297 5.57754 32.8863 5.53301C32.9309 5.64434 35.1686 5.67773 35.959 6.60176C33.7992 6.16758 35.6361 6.95801 36.6047 7.40332C35.5693 6.59062 37.0166 7.40332 36.1705 6.4793C36.5045 6.54609 35.2465 5.21016 36.5379 6.3791C35.8365 5.54414 37.9072 5.78906 36.6826 5.16563C38.475 5.6666 37.4174 5.21016 36.3598 4.75371C33.443 3.01699 41.5143 7.10273 38.2189 5.28809C40.323 5.74453 33.7213 3.6627 36.7271 4.57559C35.5805 4.07461 36.6937 4.35293 37.7291 4.67578C35.8699 4.09688 33.0867 3.01699 33.198 2.97246C33.8438 3.01699 34.4783 3.16172 35.0906 3.33984C36.9943 3.90762 34.5451 3.20625 35.0684 3.21738C41.6145 4.89844 47.3479 9.28477 50.8324 15.0182C51.6451 15.8754 53.8605 21.542 52.7027 19.026C53.226 21.0299 53.3039 23.1896 53.5822 25.2381C53.0033 24.5924 52.3576 22.21 51.801 20.8852C51.5672 21.3973 51.3 20.1615 50.4428 19.8275Z" fill="#FF5E3A"/>
+                                </svg>
+                            </div>
+                            <p class="corporate-about-card-img-text">
+                                film business is becoming global and movie promotion and distribution is getting more complex.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="corporate-about-card">
+                            <div class="corporate-about-card-img-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 56 56" fill="none">
+                                  <path d="M28 54C42.3598 54 54 42.3598 54 28C54 13.6402 42.3598 2 28 2C13.6402 2 2 13.6402 2 28C2 42.3598 13.6402 54 28 54Z" stroke="#FF5E3A" stroke-width="4" stroke-linejoin="round"/>
+                                  <path d="M27.9999 20.2C29.0342 20.2 30.0262 19.7891 30.7576 19.0577C31.489 18.3263 31.8999 17.3343 31.8999 16.3C31.8999 15.2656 31.489 14.2737 30.7576 13.5423C30.0262 12.8109 29.0342 12.4 27.9999 12.4C26.9656 12.4 25.9736 12.8109 25.2422 13.5423C24.5108 14.2737 24.0999 15.2656 24.0999 16.3C24.0999 17.3343 24.5108 18.3263 25.2422 19.0577C25.9736 19.7891 26.9656 20.2 27.9999 20.2ZM27.9999 43.6C29.0342 43.6 30.0262 43.1891 30.7576 42.4577C31.489 41.7263 31.8999 40.7343 31.8999 39.7C31.8999 38.6657 31.489 37.6737 30.7576 36.9423C30.0262 36.2109 29.0342 35.8 27.9999 35.8C26.9656 35.8 25.9736 36.2109 25.2422 36.9423C24.5108 37.6737 24.0999 38.6657 24.0999 39.7C24.0999 40.7343 24.5108 41.7263 25.2422 42.4577C25.9736 43.1891 26.9656 43.6 27.9999 43.6ZM16.2999 31.9C17.3342 31.9 18.3262 31.4891 19.0576 30.7577C19.789 30.0263 20.1999 29.0343 20.1999 28C20.1999 26.9656 19.789 25.9737 19.0576 25.2423C18.3262 24.5109 17.3342 24.1 16.2999 24.1C15.2656 24.1 14.2736 24.5109 13.5422 25.2423C12.8108 25.9737 12.3999 26.9656 12.3999 28C12.3999 29.0343 12.8108 30.0263 13.5422 30.7577C14.2736 31.4891 15.2656 31.9 16.2999 31.9ZM39.6999 31.9C40.7342 31.9 41.7262 31.4891 42.4576 30.7577C43.189 30.0263 43.5999 29.0343 43.5999 28C43.5999 26.9656 43.189 25.9737 42.4576 25.2423C41.7262 24.5109 40.7342 24.1 39.6999 24.1C38.6656 24.1 37.6736 24.5109 36.9422 25.2423C36.2108 25.9737 35.7999 26.9656 35.7999 28C35.7999 29.0343 36.2108 30.0263 36.9422 30.7577C37.6736 31.4891 38.6656 31.9 39.6999 31.9Z" stroke="#FF5E3A" stroke-width="4" stroke-linejoin="round"/>
+                                  <path d="M28 54H54" stroke="#FF5E3A" stroke-width="4" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <p class="corporate-about-card-img-text">
+                                filmmakers worldwide are tired of struggling with limited resources and expertise when it comes to marketing their movies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="corporate-about-card">
+                            <div class="corporate-about-card-img-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 51 45" fill="none">
+                                  <path d="M44.625 15.9375H47.8125V44.625H44.625V15.9375ZM12.75 27.0938L15.9375 23.9062V44.625H12.75V27.0938ZM6.375 33.4688L9.5625 30.2812V44.625H6.375V33.4688ZM19.125 20.7188L22.3125 17.5312V44.625H19.125V20.7188ZM25.5 17.5312L28.6875 20.7188V44.6001H25.5V17.5312ZM33.4688 25.5L35.0625 23.9062V44.625H31.875V23.9062L33.4688 25.5ZM38.25 20.7188L41.4375 17.5312V44.625H38.25V20.7188ZM0 39.8438L3.1875 36.6562V44.625H0V39.8438ZM51 0V12.75H47.8125V5.45361L33.4688 19.7725L23.9062 10.21L0 34.1411V29.6089L23.9062 5.72754L33.4688 15.29L45.5464 3.1875H38.25V0H51Z" fill="#FF5E3A"/>
+                                </svg>
+                            </div>
+                            <p class="corporate-about-card-img-text">
+                                inefficient marketing strategies often lead to poor box office performance and financial losses.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="corporate-about-card">
+                            <div class="corporate-about-card-img-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 51 51" fill="none">
+                                  <path d="M8.88321 42.1158C5.59661 38.8294 3.35839 34.6422 2.45159 30.0837C1.5448 25.5252 2.01016 20.8002 3.78882 16.5062C5.56749 12.2122 8.57956 8.54206 12.4441 5.95997C16.3087 3.37788 20.8522 1.9998 25.5 2M42.1168 8.88219C45.4034 12.1686 47.6416 16.3558 48.5484 20.9143C49.4552 25.4728 48.9898 30.1978 47.2112 34.4918C45.4325 38.7858 42.4204 42.4559 38.5559 45.038C34.6913 47.6201 30.1478 48.9982 25.5 48.998" stroke="#FF5E3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M38.5199 11.209C40.6244 11.209 42.3304 9.50304 42.3304 7.39858C42.3304 5.29413 40.6244 3.58813 38.5199 3.58813C36.4155 3.58813 34.7095 5.29413 34.7095 7.39858C34.7095 9.50304 36.4155 11.209 38.5199 11.209Z" stroke="#FF5E3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M12.4809 47.4096C14.5853 47.4096 16.2913 45.7036 16.2913 43.5991C16.2913 41.4947 14.5853 39.7887 12.4809 39.7887C10.3764 39.7887 8.67041 41.4947 8.67041 43.5991C8.67041 45.7036 10.3764 47.4096 12.4809 47.4096Z" stroke="#FF5E3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M20.5259 21.0389L24.3375 28.661L37.039 27.3908L29.4181 12.1466L20.5259 21.0389Z" stroke="#FF5E3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M20.5257 21.0388L15.4451 23.5791C13.9183 24.3419 14.0472 27.1341 14.81 28.6609C15.5729 30.1877 17.7299 31.964 19.2568 31.2012L24.3374 28.6609M23.2142 29.3092L26.3896 35.66L23.8493 36.9301L20.6739 30.5794" stroke="#FF5E3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p class="corporate-about-card-img-text">
+                                existing social media platforms lack specialized features for movie enthusiasts, making it challenging to find and engage with like-minded individuals.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="corporate-about-card">
+                            <div class="corporate-about-card-img-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 46 46" fill="none">
+                                  <path d="M0 8.30556C0 6.10279 0.875047 3.99023 2.43264 2.43264C3.99023 0.875047 6.10279 0 8.30556 0H37.6944C39.8972 0 42.0098 0.875047 43.5674 2.43264C45.125 3.99023 46 6.10279 46 8.30556V37.6944C46 39.8972 45.125 42.0098 43.5674 43.5674C42.0098 45.125 39.8972 46 37.6944 46H8.30556C6.10279 46 3.99023 45.125 2.43264 43.5674C0.875047 42.0098 0 39.8972 0 37.6944V8.30556ZM8.30556 3.83333C7.11945 3.83333 5.98192 4.30451 5.14322 5.14322C4.30451 5.98192 3.83333 7.11945 3.83333 8.30556V37.6944C3.83333 40.1631 5.83689 42.1667 8.30556 42.1667H37.6944C38.8806 42.1667 40.0181 41.6955 40.8568 40.8568C41.6955 40.0181 42.1667 38.8806 42.1667 37.6944V8.30556C42.1667 7.11945 41.6955 5.98192 40.8568 5.14322C40.0181 4.30451 38.8806 3.83333 37.6944 3.83333H8.30556ZM7.66667 13.4167C7.66667 10.948 9.67022 8.94444 12.1389 8.94444H33.8611C36.3298 8.94444 38.3333 10.948 38.3333 13.4167V17.25C38.3333 18.4361 37.8622 19.5736 37.0234 20.4123C36.1847 21.251 35.0472 21.7222 33.8611 21.7222H12.1389C10.9528 21.7222 9.81526 21.251 8.97655 20.4123C8.13785 19.5736 7.66667 18.4361 7.66667 17.25V13.4167ZM12.1389 12.7778C11.9694 12.7778 11.8069 12.8451 11.6871 12.9649C11.5673 13.0847 11.5 13.2472 11.5 13.4167V17.25C11.5 17.6027 11.7862 17.8889 12.1389 17.8889H33.8611C34.0306 17.8889 34.1931 17.8216 34.3129 17.7018C34.4327 17.5819 34.5 17.4194 34.5 17.25V13.4167C34.5 13.2472 34.4327 13.0847 34.3129 12.9649C34.1931 12.8451 34.0306 12.7778 33.8611 12.7778H12.1389ZM9.58333 25.5556C9.075 25.5556 8.58749 25.7575 8.22805 26.1169C7.8686 26.4764 7.66667 26.9639 7.66667 27.4722C7.66667 27.9806 7.8686 28.4681 8.22805 28.8275C8.58749 29.187 9.075 29.3889 9.58333 29.3889H21.0833C21.5917 29.3889 22.0792 29.187 22.4386 28.8275C22.7981 28.4681 23 27.9806 23 27.4722C23 26.9639 22.7981 26.4764 22.4386 26.1169C22.0792 25.7575 21.5917 25.5556 21.0833 25.5556H9.58333ZM7.66667 35.1389C7.66667 34.6306 7.8686 34.143 8.22805 33.7836C8.58749 33.4242 9.075 33.2222 9.58333 33.2222H21.0833C21.5917 33.2222 22.0792 33.4242 22.4386 33.7836C22.7981 34.143 23 34.6306 23 35.1389C23 35.6472 22.7981 36.1347 22.4386 36.4942C22.0792 36.8536 21.5917 37.0556 21.0833 37.0556H9.58333C9.075 37.0556 8.58749 36.8536 8.22805 36.4942C7.8686 36.1347 7.66667 35.6472 7.66667 35.1389ZM31.3056 25.5556C30.1194 25.5556 28.9819 26.0267 28.1432 26.8654C27.3045 27.7041 26.8333 28.8417 26.8333 30.0278V32.5833C26.8333 35.052 28.8369 37.0556 31.3056 37.0556H33.8611C35.0472 37.0556 36.1847 36.5844 37.0234 35.7457C37.8622 34.907 38.3333 33.7694 38.3333 32.5833V30.0278C38.3333 28.8417 37.8622 27.7041 37.0234 26.8654C36.1847 26.0267 35.0472 25.5556 33.8611 25.5556H31.3056ZM30.6667 30.0278C30.6667 29.8583 30.734 29.6958 30.8538 29.576C30.9736 29.4562 31.1361 29.3889 31.3056 29.3889H33.8611C34.0306 29.3889 34.1931 29.4562 34.3129 29.576C34.4327 29.6958 34.5 29.8583 34.5 30.0278V32.5833C34.5 32.7528 34.4327 32.9153 34.3129 33.0351C34.1931 33.1549 34.0306 33.2222 33.8611 33.2222H31.3056C31.1361 33.2222 30.9736 33.1549 30.8538 33.0351C30.734 32.9153 30.6667 32.7528 30.6667 32.5833V30.0278Z" fill="#FF5E3A"/>
+                                </svg>
+                            </div>
+                            <p class="corporate-about-card-img-text">
+                                movie lovers struggle to filter through an extensive range of content, resulting in a fragmented experience.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="corporate-about-card">
+                            <div class="corporate-about-card-img-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 45" fill="none">
+                                  <path d="M51.427 13.6101V36.1596C51.427 37.0134 51.2428 37.7834 50.8745 38.4698C50.5062 39.1562 50.0124 39.7421 49.393 40.2276C48.7736 40.713 48.0872 41.0981 47.3339 41.3826C46.5806 41.6672 45.8022 41.8012 44.9986 41.7844C44.2118 41.7844 43.4334 41.6505 42.6633 41.3826C41.8932 41.1148 41.2069 40.7381 40.6042 40.2527C40.0016 39.7672 39.5161 39.1729 39.1478 38.4698C38.7795 37.7667 38.587 36.9966 38.5702 36.1596C38.5702 35.3058 38.7544 34.5358 39.1227 33.8494C39.491 33.163 39.9848 32.5687 40.6042 32.0665C41.2236 31.5643 41.91 31.1877 42.6633 30.9365C43.4166 30.6854 44.1951 30.5515 44.9986 30.5348C46.1035 30.5348 47.1749 30.7942 48.2128 31.3132V17.7282L32.1419 21.746V39.3738C32.1419 40.2276 31.9577 40.9976 31.5894 41.684C31.2211 42.3703 30.7273 42.9563 30.1079 43.4417C29.4885 43.9272 28.8021 44.3122 28.0488 44.5968C27.2955 44.8814 26.517 45.0153 25.7135 44.9986C24.9267 44.9986 24.1482 44.8647 23.3782 44.5968C22.6081 44.329 21.9218 43.9523 21.3191 43.4668C20.7164 42.9814 20.231 42.3871 19.8627 41.684C19.4944 40.9809 19.3019 40.2108 19.2851 39.3738C19.2851 38.52 19.4693 37.7499 19.8376 37.0636C20.2058 36.3772 20.6997 35.7829 21.3191 35.2807C21.9385 34.7785 22.6249 34.4018 23.3782 34.1507C24.1315 33.8996 24.9099 33.7657 25.7135 33.749C26.8184 33.749 27.8898 34.0084 28.9277 34.5274V19.2349L51.427 13.6101ZM25.7135 41.7844C26.0483 41.7844 26.3999 41.7342 26.7681 41.6338C27.1364 41.5333 27.488 41.3826 27.8228 41.1818C28.1576 40.9809 28.4171 40.7298 28.6012 40.4284C28.7854 40.1271 28.8942 39.7756 28.9277 39.3738C28.9277 38.972 28.8272 38.6205 28.6263 38.3191C28.4255 38.0178 28.1576 37.7667 27.8228 37.5658C27.488 37.3649 27.1448 37.2142 26.7933 37.1138C26.4417 37.0134 26.0818 36.9631 25.7135 36.9631C25.3787 36.9631 25.0271 37.0134 24.6588 37.1138C24.2905 37.2142 23.939 37.3649 23.6042 37.5658C23.2694 37.7667 23.0099 38.0178 22.8257 38.3191C22.6416 38.6205 22.5328 38.972 22.4993 39.3738C22.4993 39.7756 22.5997 40.1271 22.8006 40.4284C23.0015 40.7298 23.2694 40.9809 23.6042 41.1818C23.939 41.3826 24.2822 41.5333 24.6337 41.6338C24.9853 41.7342 25.3452 41.7844 25.7135 41.7844ZM44.9986 38.5702C45.3334 38.5702 45.685 38.52 46.0533 38.4196C46.4216 38.3191 46.7731 38.1685 47.1079 37.9676C47.4427 37.7667 47.7022 37.5156 47.8864 37.2142C48.0705 36.9129 48.1793 36.5614 48.2128 36.1596C48.2128 35.7578 48.1124 35.4063 47.9115 35.1049C47.7106 34.8036 47.4427 34.5525 47.1079 34.3516C46.7731 34.1507 46.4299 34.0001 46.0784 33.8996C45.7268 33.7992 45.3669 33.749 44.9986 33.749C44.6638 33.749 44.3122 33.7992 43.944 33.8996C43.5757 34.0001 43.2241 34.1507 42.8893 34.3516C42.5545 34.5525 42.295 34.8036 42.1109 35.1049C41.9267 35.4063 41.8179 35.7578 41.7844 36.1596C41.7844 36.5614 41.8849 36.9129 42.0858 37.2142C42.2866 37.5156 42.5545 37.7667 42.8893 37.9676C43.2241 38.1685 43.5673 38.3191 43.9188 38.4196C44.2704 38.52 44.6303 38.5702 44.9986 38.5702ZM9.64256 12.8567H6.42837V9.64256H9.64256V12.8567ZM6.42837 16.0709H9.64256V19.2851H6.42837V16.0709ZM28.9277 9.64256H32.1419V12.8567H28.9277V9.64256ZM25.7135 28.9277H0V0H38.5702V12.8567L35.356 13.6603V3.21419H32.1419V6.42837H28.9277V3.21419H9.64256V6.42837H6.42837V3.21419H3.21419V25.7135H6.42837V22.4993H9.64256V25.7135H25.7135V28.9277Z" fill="#FF5E3A"/>
+                                </svg>
+                            </div>
+                            <p class="corporate-about-card-img-text">
+                                existing platforms offer generic content discovery features, making it difficult for movie enthusiasts to find specialized and tailored recommendations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="corporate-content-main-bg-container">
+        <div class="corporate-content-bg-container" id="corporateCreator">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="corporate-content-text-bg-container">
+                            <h1 class="corporate-content-text-heading">Creator</h1>
+                            <div class="corporate-content-text-heading-line"></div>
+                            <p class="corporate-content-text-description">
+                                Effective communication is about more than just exchanging information. communicate whatever
+                                comes up instantly, and also break up different topics into different communications.
+                            </p>
+                            <a href="#">
+                               <button class="corporate-content-text-btn">Read More</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6  d-none d-md-block">
+                        <div class="corporate-content-img-bg-container">
+                            <div class="corporate-content-red-star">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="91" height="70" viewBox="0 0 91 70" fill="none">
+                                    <path d="M45.9415 0.251953L53.5843 24.0856L81.9964 13.9342L63.1146 33.5028L90.9012 44.6778L59.7133 45.2458L65.9505 69.3323L45.9415 50.4719L25.9326 69.3323L32.1698 45.2458L0.981903 44.6778L28.7685 33.5028L9.88671 13.9342L38.2988 24.0856L45.9415 0.251953Z" fill="#FF5E3A"/>
+                                </svg>
+                            </div>
+                            <div class="corporate-content-img-bg">
+                                 <img src="{% static 'corporatecss/corpImage/creator.png' %}" class="corporate-content-img" />
+                            </div>
+                            <div class="corporate-content-blue-star">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="129" height="110" viewBox="0 0 129 110" fill="none">
+                                    <path d="M63.0447 2.01633C63.2853 0.293386 66.2254 0.293386 66.466 2.01633L68.4828 16.4702C71.087 35.1341 88.3914 49.8492 110.339 52.0637L127.337 53.7787C129.363 53.9834 129.363 56.4835 127.337 56.6881L110.339 58.4031C88.3914 60.6176 71.087 75.3327 68.4828 93.9964L66.466 108.45C66.2254 110.173 63.2853 110.173 63.0447 108.45L61.0279 93.9964C58.4237 75.3327 41.1193 60.6176 19.1712 58.4031L2.17389 56.6881C0.147767 56.4835 0.147767 53.9834 2.17389 53.7787L19.1712 52.0637C41.1193 49.8492 58.4237 35.1341 61.0279 16.4702L63.0447 2.01633Z" fill="#FFC102"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="corporate-content-bg-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 order-md-1">
+                        <div class="corporate-content-text-bg-container">
+                            <h1 class="corporate-content-text-heading">Movie News</h1>
+                            <div class="corporate-content-text-heading-line"></div>
+                            <p class="corporate-content-text-description">
+                                You can get to share your own reviews and opinions with others. you can also engage in
+                                discussions with other fans about different aspects of movies, such as cinematography,
+                                plot, and characters...
+                            </p>
+                            <a href="#">
+                               <button class="corporate-content-text-btn">Read More</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6  d-none d-md-block">
+                        <div class="corporate-content-img-bg-container">
+                            <div class="corporate-content-red-star">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="91" height="70" viewBox="0 0 91 70" fill="none">
+                                    <path d="M45.9415 0.251953L53.5843 24.0856L81.9964 13.9342L63.1146 33.5028L90.9012 44.6778L59.7133 45.2458L65.9505 69.3323L45.9415 50.4719L25.9326 69.3323L32.1698 45.2458L0.981903 44.6778L28.7685 33.5028L9.88671 13.9342L38.2988 24.0856L45.9415 0.251953Z" fill="#FF5E3A"/>
+                                </svg>
+                            </div>
+                            <div class="corporate-content-img-bg">
+                                 <img src="{% static 'corporatecss/corpImage/image 113 (1).png' %}" class="corporate-content-img" />
+                            </div>
+                            <div class="corporate-content-blue-star">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="129" height="110" viewBox="0 0 129 110" fill="none">
+                                    <path d="M63.0447 2.01633C63.2853 0.293386 66.2254 0.293386 66.466 2.01633L68.4828 16.4702C71.087 35.1341 88.3914 49.8492 110.339 52.0637L127.337 53.7787C129.363 53.9834 129.363 56.4835 127.337 56.6881L110.339 58.4031C88.3914 60.6176 71.087 75.3327 68.4828 93.9964L66.466 108.45C66.2254 110.173 63.2853 110.173 63.0447 108.45L61.0279 93.9964C58.4237 75.3327 41.1193 60.6176 19.1712 58.4031L2.17389 56.6881C0.147767 56.4835 0.147767 53.9834 2.17389 53.7787L19.1712 52.0637C41.1193 49.8492 58.4237 35.1341 61.0279 16.4702L63.0447 2.01633Z" fill="#FFC102"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="corporate-content-bg-container" id="corporateTechnology">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="corporate-content-text-bg-container">
+                            <h1 class="corporate-content-text-heading">Technology</h1>
+                            <div class="corporate-content-text-heading-line"></div>
+                            <p class="corporate-content-text-description">
+                                Artificial intelligence and machine learning have gone beyond being catchphrases today.
+                            </p>
+                            <a href="#">
+                               <button class="corporate-content-text-btn">Read More</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6  d-none d-md-block">
+                        <div class="corporate-content-img-bg-container">
+                            <div class="corporate-content-red-star">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="91" height="70" viewBox="0 0 91 70" fill="none">
+                                    <path d="M45.9415 0.251953L53.5843 24.0856L81.9964 13.9342L63.1146 33.5028L90.9012 44.6778L59.7133 45.2458L65.9505 69.3323L45.9415 50.4719L25.9326 69.3323L32.1698 45.2458L0.981903 44.6778L28.7685 33.5028L9.88671 13.9342L38.2988 24.0856L45.9415 0.251953Z" fill="#FF5E3A"/>
+                                </svg>
+                            </div>
+                            <div class="corporate-content-img-bg">
+                                 <img src="{% static 'corporatecss/corpImage/image 113 (2).png' %}" class="corporate-content-img" />
+                            </div>
+                            <div class="corporate-content-blue-star">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="129" height="110" viewBox="0 0 129 110" fill="none">
+                                    <path d="M63.0447 2.01633C63.2853 0.293386 66.2254 0.293386 66.466 2.01633L68.4828 16.4702C71.087 35.1341 88.3914 49.8492 110.339 52.0637L127.337 53.7787C129.363 53.9834 129.363 56.4835 127.337 56.6881L110.339 58.4031C88.3914 60.6176 71.087 75.3327 68.4828 93.9964L66.466 108.45C66.2254 110.173 63.2853 110.173 63.0447 108.45L61.0279 93.9964C58.4237 75.3327 41.1193 60.6176 19.1712 58.4031L2.17389 56.6881C0.147767 56.4835 0.147767 53.9834 2.17389 53.7787L19.1712 52.0637C41.1193 49.8492 58.4237 35.1341 61.0279 16.4702L63.0447 2.01633Z" fill="#FFC102"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="corporate-about-bg-container">
+        <h1 class="corporate-about-heading">Frequently asked questions</h1>
+        <div class="corporate-faq-bg-container">
+            <div class="faq-questions-bg-container">
+                <div class="accordion">
+                    <div class="faq-main-topic-container">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#preExample" aria-expanded="false" aria-controls="preExample">
+                            Overview
+                        </button>
+                    </div>
+                    <div class="accordion collapse show" id="preExample">
+                       <div class="accordion-item" >
+                        <h2 class="accordion-header" id="preHeadingOne">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#preCollapseOne" aria-expanded="false" aria-controls="preCollapseOne">
+                            What is Cinystore- An Overview of the  Business?
+                          </button>
+                        </h2>
+                        <div id="preCollapseOne" class="accordion-collapse collapse" aria-labelledby="preHeadingOne" data-bs-parent="#preExample">
+                          <p class="accordion-body faq-answers">
+                            Cinystore is AI and ML powered Movie Promotion and Monetization platform for Independent filmmakers.
+                          </p>
+                        </div>
+                      </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="preHeadingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#preCollapseTwo" aria-expanded="false" aria-controls="preCollapseTwo">
+                                What do you do?
+                              </button>
+                            </h2>
+                            <div id="preCollapseTwo" class="accordion-collapse collapse" aria-labelledby="preHeadingTwo" data-bs-parent="#preExample">
+                              <p class="accordion-body faq-answers">
+                                  Emerging applications of Artificial Intelligence and machine learning will be applied to multiple areas of
+                                  importance for filmmakers including marketing, advertising and content promotion with more efficiency.
+                              </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="preHeadingThree">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#preCollapseThree" aria-expanded="false" aria-controls="preCollapseThree">
+                                Why are you building the Platform?
+                              </button>
+                            </h2>
+                            <div id="preCollapseThree" class="accordion-collapse collapse" aria-labelledby="preHeadingThree" data-bs-parent="#preExample">
+                              <p class="accordion-body faq-answers">
+                                  Being in the Media & Entertainment Industry for more than 2 decades, we have seen and
+                                  experienced how hard it is for any filmmaker to reach out to a wider audience with their
+                                  movie. Out of the thousands of movies churned out every year, only handfuls become
+                                  blockbusters. And only a select few make real profits. We also know for a fact that you
+                                  don’t need big names for a movie to sell, as long as the content is good.
+                              </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="preHeadingFour">
+                              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#preCollapseFour" aria-expanded="false" aria-controls="preCollapseFour">
+                                What more Problems do Filmmakers face in film promotion and distribution?
+                              </button>
+                            </h2>
+                            <div id="preCollapseFour" class="accordion-collapse collapse" aria-labelledby="preHeadingFour" data-bs-parent="#preExample">
+                              <p class="accordion-body faq-answers">
+                                    1. Film business is becoming Global and Movie Promotion and distribution is getting more complex.<br class="mb-2"/>
+                                    2. Film companies and individual independent filmmakers spend huge dollar amounts to reach their audience. <br class="mb-2"/>
+                                    3. Knowing the right price of their movie is a major concern of filmmakers.<br class="mb-2"/>
+                                    4. Avoiding middle layers in film industry is difficult.
+                              </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="preHeadingFive">
+                              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#preCollapseFive" aria-expanded="false" aria-controls="preCollapseFive">
+                                Aren’t there solutions now?
+                              </button>
+                            </h2>
+                            <div id="preCollapseFive" class="accordion-collapse collapse" aria-labelledby="preHeadingFive" data-bs-parent="#preExample">
+                                <p class="accordion-body faq-answers mb-0 pb-0">
+                                    Yes all the social media platforms provide analytics and metrics of Likes and shares
+                                    with demographic information along with the audience reach, but they do not provide any
+                                    tools or Insights to read these numbers.
+                                </p>
+                                <p class="accordion-body faq-answers">
+                                    Most of the Big time film studios have the infrastructure and Bandwidth for a structured
+                                    promotion, but the Independent filmmakers with a market share of 80% movies produced,
+                                    have to rely on an assortment of Vendors.
+                                </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="preHeadingSix">
+                              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#preCollapseSix" aria-expanded="false" aria-controls="preCollapseSix">
+                                How are you doing it?
+                              </button>
+                            </h2>
+                            <div id="preCollapseSix" class="accordion-collapse collapse" aria-labelledby="preHeadingSix" data-bs-parent="#preExample">
+                              <p class="accordion-body faq-answers">
+                                  A platform that, shall empower filmmakers to connect more deeply with prospective
+                                  Buyers by combining data, analytics, marketing activation and data management platform
+                                  capabilities on a single platform. The data synergies facilitate a deeper understanding
+                                  of consumers and audiences, more effective one-to-one messaging, and superior ROI
+                                  analysis and campaign optimization.
+                              </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="preHeadingSeven">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#preCollapseSeven" aria-expanded="false" aria-controls="preCollapseSeven">
+                                How will it help the filmmakers?
+                              </button>
+                            </h2>
+                            <div id="preCollapseSeven" class="accordion-collapse collapse" aria-labelledby="preHeadingSeven" data-bs-parent="#preExample">
+                                <p class="accordion-body faq-answers mb-0 pb-0">
+                                    Reduce cost of promotion
+                                </p>
+                                <p class="accordion-body faq-answers mb-0 pb-0">
+                                    Increase Reach
+                                </p>
+                                <p class="accordion-body faq-answers mb-0 pb-0">
+                                    Better Monetization
+                                </p>
+                                <p class="accordion-body faq-answers">
+                                    Increase Producers Profits
+                                </p>
+
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-questions-bg-container">
+                <div class="accordion">
+                    <div class="faq-main-topic-container">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutExample" aria-expanded="false" aria-controls="aboutExample">
+                            Product
+                        </button>
+                    </div>
+                    <div class="accordion collapse" id="aboutExample">
+                       <div class="accordion-item" >
+                        <h2 class="accordion-header" id="aboutHeadingOne">
+                          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#aboutCollapseOne" aria-expanded="false" aria-controls="aboutCollapseOne">
+                            What is the Sign-up process for Cinystore?
+                          </button>
+                        </h2>
+                        <div id="aboutCollapseOne" class="accordion-collapse collapse" aria-labelledby="aboutHeadingOne" data-bs-parent="#aboutExample">
+                            <p class="accordion-body faq-answers">
+                                Steps to sign into your Producer Account<br/>
+                                Go to www.cinystore.com/Business/<br/>
+                                Click Register Now<br/>
+                                Fill the form with appropriate details<br/>
+                                Accept the Terms and Conditions of the website & click on Producer Register Account<br/>
+                            </p>
+                        </div>
+                      </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="aboutHeadingTwo">
+                              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#aboutCollapseTwo" aria-expanded="false" aria-controls="aboutCollapseTwo">
+                                How do I Create a Label
+                              </button>
+                            </h2>
+                            <div id="aboutCollapseTwo" class="accordion-collapse collapse" aria-labelledby="aboutHeadingTwo" data-bs-parent="#aboutExample">
+                                <p class="accordion-body faq-answers">
+                                    Creating Label is a simple 5 minutes activity, you open the Create Label Page from
+                                    the left sidebar in the Producer Dashboard and Upload Details as asked in the form
+                                    of your project and click on Publish. Your Label is Created
+                                </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="aboutHeadingThree">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutCollapseThree" aria-expanded="false" aria-controls="aboutCollapseThree">
+                                What details Can I Upload?
+                              </button>
+                            </h2>
+                            <div id="aboutCollapseThree" class="accordion-collapse collapse" aria-labelledby="aboutHeadingThree" data-bs-parent="#aboutExample">
+                                <p class="accordion-body faq-answers">
+                                    The Form in the create label will guide you the details you have to fill, which
+                                    include the Movie Name, Cast & Crew, Posters, banners, Trailers and all the other
+                                    details you think you would like to share with your audience
+                                </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="aboutHeadingFour">
+                              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#aboutCollapseFour" aria-expanded="false" aria-controls="aboutCollapseFour">
+                                How many times can I upload?
+                              </button>
+                            </h2>
+                            <div id="aboutCollapseFour" class="accordion-collapse collapse" aria-labelledby="aboutHeadingFour" data-bs-parent="#aboutExample">
+                                <p class="accordion-body faq-answers">
+                                    For one movie you can create only one label, but for all other information and
+                                    details, you can update them any number of times
+                                </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="aboutHeadingFive">
+                              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#aboutCollapseFive" aria-expanded="false" aria-controls="aboutCollapseFive">
+                                Is there a Limitation on the number of posts?
+                              </button>
+                            </h2>
+                            <div id="aboutCollapseFive" class="accordion-collapse collapse" aria-labelledby="aboutHeadingFive" data-bs-parent="#aboutExample">
+                                <p class="accordion-body faq-answers">
+                                    There is no limitation on the number of posts you would like to post. Feel free and
+                                    share everything you would like to share with your audience, keep entertaining and
+                                    engaging them with your movie details.
+                                </p>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-questions-bg-container">
+                <div class="accordion">
+                    <div class="faq-main-topic-container">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#useExample" aria-expanded="false" aria-controls="useExample">
+                            Use Case
+                        </button>
+                    </div>
+
+                    <div class="accordion collapse" id="useExample">
+                        <div class="accordion-item" >
+                        <h2 class="accordion-header" id="useHeadingOne">
+                            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#useCollapseOne" aria-expanded="false" aria-controls="useCollapseOne">
+                                I have just completed my film. When should I focus on distribution and promotional activities?
+                            </button>
+                        </h2>
+                        <div id="useCollapseOne" class="accordion-collapse collapse" aria-labelledby="useHeadingOne" data-bs-parent="#useExample">
+                            <p class="accordion-body faq-answers mb-0 pb-0">
+                                Great!
+                            </p>
+                            <p class="accordion-body faq-answers">
+                                Typically for a large scale movie, the promotions should start at least 4-5 months before
+                                the movie release. If it is a small to medium scale movie, the movie promotions should
+                                begin at least two months prior to its release. So, we suggest that depending on the scale
+                                and size of your movie, you plan its release date and accordingly the movie promotions
+                            </p>
+                        </div>
+                      </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="useHeadingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#useCollapseTwo" aria-expanded="false" aria-controls="useCollapseTwo">
+                                    I am a filmmaker, a creative person and not into the business or the marketing
+                                    side of movie-making which is equally or more important. Please share your expert
+                                    suggestions.
+                                </button>
+                            </h2>
+                            <div id="useCollapseTwo" class="accordion-collapse collapse" aria-labelledby="useHeadingTwo" data-bs-parent="#useExample">
+                                <p class="accordion-body faq-answers">
+                                    You are 100% right when you say that the business and marketing side of movie-making
+                                    is critical. Some people do get lucky and have a fluke hit or has a producing partner
+                                    who takes care of all the business and marketing or has all the money to hire the right
+                                    person for the job. But typically for someone whose film career is in the early stages,
+                                    it’s tough getting into distribution and promotion. It’s difficult getting access and
+                                    being able to afford sophisticated technological infrastructure which big production
+                                    houses offer to veteran filmmakers. Cinystore offers precisely the same technological
+                                    infrastructure and business tools of big production houses at an affordable deal for
+                                    passionate filmmakers.
+                                </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="useHeadingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#useCollapseThree" aria-expanded="false" aria-controls="useCollapseThree">
+                                    I am receiving inquiries from many distributors regarding my film.
+                                    They are excited to see it. Should I send them a copy of the movie so
+                                    that can they can acquire it?
+                                </button>
+                            </h2>
+                            <div id="useCollapseThree" class="accordion-collapse collapse" aria-labelledby="useHeadingThree" data-bs-parent="#useExample">
+                                <p class="accordion-body faq-answers">
+                                    It is a business decision that you need to make. We have no say in it.
+                                    However, this is our take - If you are listed in the trade, the chances are that
+                                    major distributors will request a copy of your movie. As a filmmaker in the early
+                                    stage, you may be tempted to show them your work even if it is a rough cut hoping
+                                    to get a distribution deal. Don’t fall for any of their requests. Avoid sending
+                                    them any copy of your movie - rough or final cut. Just don’t send them the movie.
+                                    Instead, You must showcase your movie at the right place (like Cinystore, film
+                                    festival, etc), at the right time to make the buyers interested in buying your
+                                    film. Even here, a small portion or teaser of the movie will be shown to the
+                                    audience. So when you receive a call from any distributor requesting a copy of
+                                    your movie, thank them for their interest but tell them that it’s not ready.
+                                    Tell them to check with you in a month or so.
+                                </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="useHeadingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#useCollapseFour" aria-expanded="false" aria-controls="useCollapseFour">
+                                    My film is selected in a highly reputed film festival. So, I don’t need to
+                                    bother about distribution, marketing and promotions anymore. Am I correct?
+                                </button>
+                            </h2>
+                            <div id="useCollapseFour" class="accordion-collapse collapse" aria-labelledby="useHeadingFour" data-bs-parent="#useExample">
+                                <p class="accordion-body faq-answers">
+                                    Congratulations on the honorable selection! Film festivals are a great platform
+                                    to showcase your movie to the world at large. But, they last for a day or two.
+                                    Also, they are an expensive proposition. When you go to any film festival, your
+                                    work has just begun. When you are out promoting your movie at any reputed film
+                                    festival, you need to have a strong marketing plan and strategy in place. There
+                                    will be press coverage, interviews, awards, critic quotes and so much marketing
+                                    material that you can capitalize upon to it achieve your movie success. You have
+                                    one big chance to bag a distribution deal and marketing is your key to achieving
+                                    that goal. But most filmmakers miss this crucial aspect of the film business and
+                                    come back from the festival without a deal. Worse still, they are clueless about
+                                    what their next step should be. Have a strong marketing strategy and plan in place
+                                    and it could just make your film career.
+                                </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="useHeadingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#useCollapseFive" aria-expanded="false" aria-controls="useCollapseFive">
+                                    Do I still need to invest in traditional marketing when I plan to sell my
+                                    movie via social media and the internet?
+                                </button>
+                            </h2>
+                            <div id="useCollapseFive" class="accordion-collapse collapse" aria-labelledby="useHeadingFive" data-bs-parent="#useExample">
+                                <p class="accordion-body faq-answers">
+                                    It is advisable depending on your audience demographics, budget and overall
+                                    business goal. Even if you want to get into traditional marketing and
+                                    distribution, Cinystore’s intelligent business tools will help you gain insights
+                                    on which market to focus on and where to direct your marketing spend. Out of the
+                                    thousands of movies made each year, a handful of them make serious money. Because
+                                    making money is hard work. It takes specific strategies and plans to succeed.
+                                    Very few filmmakers invest that much of time, effort and money into the marketing
+                                    side of movie-business. And even if they do, they lack the knowledge or
+                                    infrastructure on how to use traditional and non-traditional marketing and
+                                    distribution. The truth is that anyone with a decent film can achieve business
+                                    success with the right knowledge and dedicated support. You don’t need big names,
+                                    or your movie doesn’t even have to be phenomenal to become a success. If your
+                                    film is decent enough, you stand a real chance.
+                                </p>
+                            </div>
+                          </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="useHeadingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#useCollapseSix" aria-expanded="false" aria-controls="useCollapseSix">
+                                    Why should I buy a business tool when I can hire an experienced marketing
+                                    professional, to promote my film?
+                                </button>
+                            </h2>
+                            <div id="useCollapseSix" class="accordion-collapse collapse" aria-labelledby="useHeadingSix" data-bs-parent="#useExample">
+                                <p class="accordion-body faq-answers">
+                                    Only big production houses can afford a proper marketing team. Even you hire an
+                                    experienced marketing professional, they lack the intelligent insights that can
+                                    only be captured by a sophisticated tool like Cinystore, which limits their
+                                    capacity to market and promote a movie effectively.
+                                </p>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="corporate-contact-main-bg-container">
+        <div class="corporate-contact-bg-container" id="corporateContact">
+            <div class="corporate-contact-form-bg-container">
+                <h1 class="corporate-content-text-heading">Get in touch</h1>
+                <div class="corporate-contact-text-heading-line"></div>
+                <form class="corporate-contact-form">
+                    <div class="corporate-contact-input-div">
+                        <input type="text" id="name"  class="corporate-contact-input" placeholder="Name" />
+                    </div>
+                    <div class="corporate-contact-input-div">
+                        <input type="text" id="email"  class="corporate-contact-input" placeholder="Email" />
+                    </div>
+                    <div class="corporate-contact-input-div">
+                        <input type="text" id="subject"  class="corporate-contact-input" placeholder="Subject" />
+                    </div>
+                    <div class="corporate-contact-input-div">
+                        <textarea id="message" rows="6" cols="100"  class="corporate-contact-textarea" placeholder="Message"></textarea>
+                    </div>
+                    <!--text captcha-->
+                    <div class="text-captcha-container">
+                      <div class="text-captcha-input_field captcha_box">
+                        <input type="text" value="" class="text-captcha-input" />
+                        <div class="text-captcha-refresh_button">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                              <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="captcha_input">
+                        <input type="text" placeholder="Enter captcha" class="text-captcha-user-input"/>
+                      </div>
+                    </div>
+                    <!--text captcha-->
+                    <div class="corporate-contact-checkbox-div">
+                        <input type="checkbox" class="corporate-contact-checkbox"/>
+                        <p class="corporate-contact-checkbox-text">I would like to receive the newsletter.</p>
+                    </div>
+                    <button type="submit" class="corporate-contact-btn">Submit</button>
+                </form>
+            </div>
+            <div class="corporate-address-bg-container d-none d-md-block">
+                <div class="corporate-address-map-div">
+                   <img src="{% static 'corporatecss/corpImage/Maps.png' %}" class="corporate-address-map" />
+                </div>
+                <div class="corporate-address-text-container">
+                    <div class="d-flex mr-5 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                          <path d="M9.99805 12C10.6855 12 11.2743 11.7648 11.7643 11.2944C12.2543 10.824 12.4989 10.2592 12.498 9.6C12.498 8.94 12.253 8.3748 11.763 7.9044C11.273 7.434 10.6847 7.1992 9.99805 7.2C9.31055 7.2 8.7218 7.4352 8.2318 7.9056C7.7418 8.376 7.49721 8.9408 7.49805 9.6C7.49805 10.26 7.74305 10.8252 8.23305 11.2956C8.72305 11.766 9.31138 12.0008 9.99805 12ZM9.99805 24C6.64388 21.26 4.13888 18.7152 2.48305 16.3656C0.827214 14.016 -0.00111979 11.8408 -0.00195312 9.84C-0.00195312 6.84 1.00346 4.45 3.0143 2.67C5.02513 0.89 7.35305 0 9.99805 0C12.6439 0 14.9722 0.89 16.983 2.67C18.9939 4.45 19.9989 6.84 19.998 9.84C19.998 11.84 19.1697 14.0152 17.513 16.3656C15.8564 18.716 13.3514 21.2608 9.99805 24Z" fill="#FF5E3A"/>
+                        </svg>
+                        <p class="corporate-address-text">Cinystore address</p>
+                    </div>
+                    <div class="d-flex mr-5 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18" fill="none">
+                          <path d="M22 2.2C22 0.99 21.01 0 19.8 0H2.2C0.99 0 0 0.99 0 2.2V15.4C0 16.61 0.99 17.6 2.2 17.6H19.8C21.01 17.6 22 16.61 22 15.4V2.2ZM19.8 2.2L11 7.7L2.2 2.2H19.8ZM19.8 15.4H2.2V4.4L11 9.9L19.8 4.4V15.4Z" fill="#FF5E3A"/>
+                        </svg>
+                        <p class="corporate-address-text">admin@cinystore.com</p>
+                    </div>
+                </div>
+                <div class="corporate-social-media-icons">
+                    <a href="https://www.instagram.com/cinystoreofficial/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+                          <path d="M20.46 15.5C20.46 16.481 20.1691 17.44 19.6241 18.2556C19.0791 19.0713 18.3044 19.707 17.3981 20.0824C16.4918 20.4579 15.4945 20.5561 14.5324 20.3647C13.5702 20.1733 12.6864 19.7009 11.9928 19.0072C11.2991 18.3136 10.8267 17.4298 10.6353 16.4676C10.4439 15.5055 10.5421 14.5082 10.9176 13.6019C11.293 12.6956 11.9287 11.9209 12.7444 11.3759C13.56 10.8309 14.519 10.54 15.5 10.54C16.8142 10.5441 18.0734 11.068 19.0027 11.9973C19.932 12.9266 20.4559 14.1858 20.46 15.5ZM31 8.68V22.32C31 24.6221 30.0855 26.8299 28.4577 28.4577C26.8299 30.0855 24.6221 31 22.32 31H8.68C6.37792 31 4.17013 30.0855 2.54231 28.4577C0.914497 26.8299 0 24.6221 0 22.32V8.68C0 6.37792 0.914497 4.17013 2.54231 2.54231C4.17013 0.914497 6.37792 0 8.68 0H22.32C24.6221 0 26.8299 0.914497 28.4577 2.54231C30.0855 4.17013 31 6.37792 31 8.68ZM22.94 15.5C22.94 14.0285 22.5037 12.5901 21.6861 11.3666C20.8686 10.1431 19.7066 9.18945 18.3472 8.62634C16.9877 8.06322 15.4917 7.91588 14.0485 8.20296C12.6053 8.49003 11.2796 9.19862 10.2391 10.2391C9.19862 11.2796 8.49003 12.6053 8.20296 14.0485C7.91588 15.4917 8.06322 16.9877 8.62634 18.3472C9.18945 19.7066 10.1431 20.8686 11.3666 21.6861C12.5901 22.5037 14.0285 22.94 15.5 22.94C17.4732 22.94 19.3656 22.1561 20.7609 20.7609C22.1561 19.3656 22.94 17.4732 22.94 15.5ZM25.42 7.44C25.42 7.07213 25.3109 6.71252 25.1065 6.40664C24.9022 6.10076 24.6117 5.86236 24.2718 5.72158C23.9319 5.5808 23.5579 5.54397 23.1971 5.61574C22.8363 5.68751 22.5049 5.86466 22.2448 6.12478C21.9847 6.38491 21.8075 6.71633 21.7357 7.07713C21.664 7.43794 21.7008 7.81192 21.8416 8.15179C21.9824 8.49166 22.2208 8.78216 22.5266 8.98653C22.8325 9.19091 23.1921 9.3 23.56 9.3C24.0533 9.3 24.5264 9.10404 24.8752 8.75522C25.224 8.4064 25.42 7.9333 25.42 7.44Z" fill="#FF5E3A"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/CinYstore" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="29" viewBox="0 0 35 29" fill="none">
+                          <path d="M35 3.41176C33.7118 4.00882 32.3231 4.40118 30.8843 4.58882C32.3566 3.68471 33.4943 2.25176 34.0296 0.528823C32.641 1.38176 31.1018 1.97882 29.479 2.32C28.1573 0.852941 26.3002 0 24.1922 0C20.2605 0 17.0483 3.27529 17.0483 7.31823C17.0483 7.89823 17.1152 8.46118 17.2323 8.99C11.2763 8.68294 5.97275 5.76588 2.44264 1.34765C1.82361 2.42235 1.47228 3.68471 1.47228 5.01529C1.47228 7.55706 2.72706 9.80882 4.66778 11.0882C3.47992 11.0882 2.37572 10.7471 1.40535 10.2353V10.2865C1.40535 13.8347 3.88145 16.8029 7.16061 17.4682C6.10781 17.762 5.00255 17.8029 3.93164 17.5876C4.38605 19.0419 5.27599 20.3143 6.47637 21.2262C7.67674 22.138 9.12718 22.6434 10.6238 22.6712C8.08686 24.719 4.94215 25.8259 1.7065 25.81C1.13767 25.81 0.568834 25.7759 0 25.7076C3.17878 27.7888 6.95985 29 11.0086 29C24.1922 29 31.4364 17.8435 31.4364 8.17118C31.4364 7.84706 31.4364 7.54 31.4197 7.21588C32.825 6.19235 34.0296 4.89588 35 3.41176Z" fill="#FF5E3A"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/CinyStoreOfficial" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                          <path d="M33 16.5414C33 7.41053 25.608 0 16.5 0C7.392 0 0 7.41053 0 16.5414C0 24.5474 5.676 31.2135 13.2 32.7519V21.5038H9.9V16.5414H13.2V12.406C13.2 9.21353 15.7905 6.61654 18.975 6.61654H23.1V11.5789H19.8C18.8925 11.5789 18.15 12.3233 18.15 13.2331V16.5414H23.1V21.5038H18.15V33C26.4825 32.1729 33 25.1263 33 16.5414Z" fill="#FF5E3A"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" style="margin-top:6px;" viewBox="0 0 33 33" fill="none">
+                          <path d="M13.2 16.4286L21.7635 11.5L13.2 6.57143V16.4286ZM32.274 3.565C32.4885 4.33714 32.637 5.37214 32.736 6.68643C32.8515 8.00071 32.901 9.13429 32.901 10.12L33 11.5C33 15.0979 32.736 17.7429 32.274 19.435C31.8615 20.9136 30.9045 21.8664 29.4195 22.2771C28.644 22.4907 27.225 22.6386 25.047 22.7371C22.902 22.8521 20.9385 22.9014 19.1235 22.9014L16.5 23C9.5865 23 5.28 22.7371 3.5805 22.2771C2.0955 21.8664 1.1385 20.9136 0.726 19.435C0.5115 18.6629 0.363 17.6279 0.264 16.3136C0.1485 14.9993 0.0989999 13.8657 0.0989999 12.88L0 11.5C0 7.90214 0.264 5.25714 0.726 3.565C1.1385 2.08643 2.0955 1.13357 3.5805 0.722857C4.356 0.509286 5.775 0.361428 7.953 0.262857C10.098 0.147857 12.0615 0.0985713 13.8765 0.0985713L16.5 0C23.4135 0 27.72 0.262857 29.4195 0.722857C30.9045 1.13357 31.8615 2.08643 32.274 3.565Z" fill="#FF5E3A"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+</body>
+</html>
